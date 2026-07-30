@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مؤلفات الأستاذ خيران محسن الزُبَيدي</title>
+    <!-- خطوط عربية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+        /* ===== المتغيرات ===== */
+        :root {
+            --primary-color: #1e3a2f;
+            --secondary-color: #2d5a4a;
+            --accent-color: #c4a882;
+            --accent-hover: #a88963;
+            --bg-light: #fdfbf7;
+            --text-dark: #1f2421;
+            --text-muted: #6c757d;
+            --card-bg: #ffffff;
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+            --shadow-hover: 0 8px 28px rgba(0, 0, 0, 0.10);
+            --radius: 10px;
+        }
+
+        /* ===== إعادة ضبط ===== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        h1,
+        h2,
+        h3,
+        .profile-title {
+            font-family: 'Amiri', serif;
+        }
+
+        /* ===== الهيدر ===== */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0.05;
+            background-image: url('https://www.transparenttextures.com/patterns/sandpaper.png');
+            pointer-events: none;
+        }
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-badge {
+            background-color: rgba(255, 255, 255, 0.10);
+            display: inline-block;
+            padding: 5px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            letter-spacing: 0.3px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 25px;
+            font-weight: 300;
+            opacity: 0.92;
+        }
+
+        .profile-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-profile {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid var(--accent-color);
+            padding: 8px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        .btn-profile:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* ===== المحتوى الرئيسي ===== */
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2.1rem;
+            color: var(--primary-color);
+            margin-bottom: 35px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* ===== بطاقات المؤلفات ===== */
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 60px;
+        }
+
+        .pub-card {
+            background: var(--card-bg);
+            border-right: 5px solid var(--accent-color);
+            border-radius: 4px;
+            padding: 22px 25px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .pub-card:hover {
+            transform: scale(1.005);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .pub-info {
+            flex: 1;
+        }
+
+        .pub-meta {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .pub-year {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 2px 14px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .pub-author {
+            color: var(--secondary-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            background-color: #eef4f8;
+            padding: 2px 12px;
+            border-radius: 4px;
+        }
+
+        .pub-title {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .pub-journal {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-pub-link {
+            background-color: #1877f2;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+            align-self: center;
+            flex-shrink: 0;
+        }
+        .btn-pub-link:hover {
+            background-color: #145dbf;
+        }
+
+        /* ===== شبكة الفيديو مع الصور المصغرة ===== */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
+            margin-bottom: 60px;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border-top: 3px solid var(--secondary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .video-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* حاوية الصورة المصغرة */
+        .video-thumbnail-wrapper {
+            position: relative;
+            background: #0b0b0b;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-thumbnail-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .video-card:hover .video-thumbnail-wrapper img {
+            transform: scale(1.03);
+        }
+
+        /* تراكب أيقونة التشغيل */
+        .play-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.20);
+            transition: background 0.3s ease;
+            pointer-events: none;
+        }
+        .video-thumbnail-wrapper:hover .play-overlay {
+            background: rgba(0, 0, 0, 0.35);
+        }
+        .play-overlay i {
+            font-size: 4.2rem;
+            color: rgba(255, 255, 255, 0.85);
+            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+            transition: transform 0.25s ease, color 0.25s ease;
+            pointer-events: none;
+        }
+        .video-thumbnail-wrapper:hover .play-overlay i {
+            transform: scale(1.10);
+            color: #fff;
+        }
+
+        /* الرابط الذي يغطي الصورة بالكامل (لجعلها قابلة للنقر) */
+        .video-thumbnail-link {
+            display: block;
+            position: relative;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            text-decoration: none;
+        }
+        .video-thumbnail-link img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .video-card:hover .video-thumbnail-link img {
+            transform: scale(1.03);
+        }
+
+        /* جسم البطاقة (العنوان) */
+        .video-body {
+            padding: 18px 20px 12px 20px;
+            flex: 1;
+        }
+        .video-body h3 {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-weight: 700;
+        }
+
+        /* زر المشاهدة */
+        .btn-video {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #ff0000;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 16px;
+            margin: 4px 16px 18px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease, transform 0.15s ease;
+            border: none;
+        }
+        .btn-video:hover {
+            background-color: #cc0000;
+            transform: scale(1.01);
+        }
+        .btn-video i {
+            font-size: 1.1rem;
+        }
+
+        /* ===== التذييل ===== */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 4px solid var(--accent-color);
+        }
+        .footer-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .footer-sponsor {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .footer-group-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .footer-group-box h4 {
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .btn-facebook {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #1877f2;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 28px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn-facebook:hover {
+            background-color: #145dbf;
+        }
+        .footer-desc {
+            font-size: 0.9rem;
+            color: #b3c5d7;
+            max-width: 700px;
+            margin: 15px auto 0;
+            line-height: 1.7;
+        }
+
+        /* ===== استجابة ===== */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1.05rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .pub-card {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 18px;
+            }
+            .btn-pub-link {
+                text-align: center;
+                justify-content: center;
+                align-self: stretch;
+            }
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+            .play-overlay i {
+                font-size: 3.2rem;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== الهيدر ===== -->
+    <header>
+        <div class="header-container">
+            <span class="profile-badge">المؤلفات الأكاديمية الكاملة</span>
+            <h1>الأستاذ خيران محسن الزُبَيدي</h1>
+            <p class="subtitle">مدير عام الآثار بمحافظة شبوة </p>
+
+            <div class="profile-links">
+
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== المحتوى الرئيسي ===== -->
+    <main>
+
+        <!-- ===== قائمة المؤلفات ===== -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-book-open"></i> قائمة المؤلفات والأبحاث العلمية</h2>
+
+            <div class="publications-list">
+
+                <!-- 2016 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2016</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: ناصر صالح حبتور</span>
+                        </div>
+                        <h3 class="pub-title">نقش جديد من مرخة</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة كليات التربية – جامعة عدن، المجلد 14، العدد 1: 173–203</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/28050860177883702/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2013 (متعدد) -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2013</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: أحمد باطايع</span>
+                        </div>
+                        <h3 class="pub-title">هجر عبدان حيد حنة (وادي عبدان)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة ريدان 8: 19–47. وزارة الثقافة اليمنية بالتعاون مع المعهد الفرنسي للآثار والعلوم الاجتماعية–صنعاء.</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/612971335432623/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2013 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2013</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: منير عربش، أحمد باطايع</span>
+                        </div>
+                        <h3 class="pub-title">نقوش قتبانية جديدة 3</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة ريدان 8: 49–103. وزارة الثقافة اليمنية بالتعاون مع المعهد الفرنسي للآثار والعلوم الاجتماعية–صنعاء.</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/612968865432870" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2013 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2013</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: عبد الله أحمد مكياش</span>
+                        </div>
+                        <h3 class="pub-title">نقش أوساني جديد من وادي مرخة (اليمن): دراسة تحليلية لغوية</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> المجلة الأردنية للتاريخ والآثار، المجلد 7، العدد 1، عمّان: الجامعة الأردنية، ص 173–209.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/28131955923107460/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2013 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2013</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: ناصر صالح حبتور يسلم</span>
+                        </div>
+                        <h3 class="pub-title">نقوش سبئية جديدة من جباه</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة السياحة والآثار، المجلد 25، العدد 2 (يوليو/شعبان 1434): 91–119. الرياض: جامعة الملك سعود.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/638096526253437/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2009 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2009</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: عبد الباسط قائد نعمان، صلاح سلطان الحسيني</span>
+                        </div>
+                        <h3 class="pub-title">مشروع المسح الأثري الشامل للبلوك رقم (3) م/ شبوة</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> حولية الآثار اليمنية العدد الثاني، الهيئة العامة للآثار والمتاحف، صنعاء 2009.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/671439832919106/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2008 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2008</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: عبد الله أحمد مكياش</span>
+                        </div>
+                        <h3 class="pub-title">نقش قتباني جديد من وادي مرخة: دراسة تحليلية لغوية</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة كلية الآداب، العدد 5، عدن: جامعة عدن – كلية الآداب، ص 67–88.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/527953483934409/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+
+                <!-- 1993 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1993</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: محمد صالح بلعفير، محمد احمد سعيد عامر</span>
+                        </div>
+                        <h3 class="pub-title">مقابر هجر امذيبية بوادي ضراء</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> كنوز وادي ضراء حفرية إنقاذ مشتركة في موقع هجر أم ذيبة، 1993 المكتبة الشرقية –بول غوثنز. باريس، ص 13 - 23.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/5169874203075624/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 1992 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1992</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: جان فرنسوا بريتون</span>
+                        </div>
+                        <h3 class="pub-title">خارطة البعثة الاركيولوجية في الجمهورية اليمنية، بيحان ونصاب، محافظة شبوة 1992</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> ERC باريس، 1992 
+.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/28136960419273677/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== محاضرات يوتيوب مع صور مصغرة ===== -->
+        <section>
+            <h2 class="section-title"><i class="fab fa-youtube"></i> لقاءات مرئية على يوتيوب</h2>
+
+            <div class="video-grid">
+
+                <!-- 1 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=WEtjmAcZaBA" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/WEtjmAcZaBA/hqdefault.jpg" alt="صباحك ياعدن لقاء مع خيران الزُبَيدي" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>صباحك ياعدن | لقاء مع خيران الزُبَيدي - مدير عام الهيئة العامة للآثار والمتاحف بمحافظة شبوة</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=WEtjmAcZaBA" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 2 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=6GC2sbISNbQ" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/6GC2sbISNbQ/hqdefault.jpg" alt="شبوة حديث لمدير عام متحف شبوة خيران الزبيدي" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>#شبوةحديث لمدير عام متحف شبوة، الأستاذ خيران الزبيدي: متحف عتق منارة الأجيال</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=6GC2sbISNbQ" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 3 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=ERDpxwU4bfY" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/ERDpxwU4bfY/hqdefault.jpg" alt="محطات متحف شبوة كنز أثري في زمن الخدلان" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>محطات | متحف شبوة.. كنز أثري في زمن الخدلان</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=ERDpxwU4bfY" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 4 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=QTf1tmtlM4I" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/QTf1tmtlM4I/hqdefault.jpg" alt="مذكرات شبوة متحف عتق دور هام في حفظ آثار وتاريخ شبوة" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>مذكرات شبوة | متحف عتق.. دور هام في حفظ آثار وتاريخ شبوة.. الحلقة الكاملة (16 ديسمبر)</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=QTf1tmtlM4I" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 5 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=IKMHSEmHFTE" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/IKMHSEmHFTE/hqdefault.jpg" alt="شبوة هيئة الآثار تناشد بالتدخل لإنقاذ ما تبقى من معالم وآثار المحافظة" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>شبوة هيئة الآثار تناشد بالتدخل لإنقاذ ما تبقى من معالم وآثار المحافظة تقرير زبين عطية</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=IKMHSEmHFTE" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 6 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=UUboPAbvxvI" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/UUboPAbvxvI/hqdefault.jpg" alt="اليمن إعادة فتح متحف شبوة بعد إغلاقه لمدة 10 سنوات" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>اليمن.. إعادة فتح متحف شبوة بعد إغلاقه لمدة 10 سنوات</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=UUboPAbvxvI" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 7 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=xaQ-Umvu2tw" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/xaQ-Umvu2tw/hqdefault.jpg" alt="معالم أثرية وشواهد تاريخية في شبوة تتعرض للنهب والتخريب" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>معالم أثرية وشواهد تاريخية في شبوة تتعرض للنهب والتخريب</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=xaQ-Umvu2tw" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== التذييل ===== -->
+    <footer>
+        <div class="footer-container">
+            <p class="footer-sponsor">الصفحة برعاية وتصميم الدكتور صلاح الحسيني 2026 ©</p>
+
+            <div class="footer-group-box">
+                <h4>تابعونا على الفيسبوك</h4>
+                <p>في مجموعة: <strong>كتب تاريخ وآثار الجزيرة العربية</strong></p>
+                <a href="https://www.facebook.com/groups/arabia.books" target="_blank" class="btn-facebook">
+                    <i class="fab fa-facebook"></i> الانضمام للمجموعة
+                </a>
+            </div>
+
+            <p class="footer-desc">
+                مكتبة رقمية متخصصة في تاريخ وآثار وتراث شبه الجزيرة العربية واليمن القديم.
+                تضم أعمالاً أكاديمية وبحثية ما بين رسائل جامعية وأبحاث محكمة في كبرى المجلات العلمية.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤلفات الأستاذ الدكتور عبد الرزاق أحمد راشد المَعْمَري</title>
+    
+    <!-- Google Fonts: Tajawal & Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary-dark: #0f2b46;
+            --primary: #1e4a72;
+            --accent-gold: #c9a74d;
+            --light-gray: #f5f7fa;
+            --text-dark: #2c3e50;
+            --text-muted: #64748b;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+        
+        h1, h2, h3 { font-family: 'Cairo', sans-serif; font-weight: 700; }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(15, 43, 70, 0.04), 0 10px 20px rgba(15, 43, 70, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(15, 43, 70, 0.06);
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(15, 43, 70, 0.12), 0 20px 40px rgba(15, 43, 70, 0.08);
+        }
+        
+        .btn-academic {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-academic::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-academic:hover::before { left: 100%; }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(15, 43, 70, 0.25);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(15, 43, 70, 0.35);
+        }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, #c9a74d 0%, #d4b65f 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(201, 167, 77, 0.25);
+        }
+        
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 167, 77, 0.35);
+        }
+        
+        .year-badge {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(15, 43, 70, 0.2);
+        }
+        
+        .publication-card { position: relative; overflow: hidden; }
+        
+        .publication-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--accent-gold), var(--primary));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .publication-card:hover::before { opacity: 1; }
+        
+        .profile-image-container { position: relative; width: 180px; height: 180px; }
+        
+        .profile-image-container::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--primary));
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+        
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-image-container { width: 140px; height: 140px; }
+            .btn-academic { padding: 0.6rem 1rem; font-size: 0.9rem; }
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+            margin: 2rem 0;
+        }
+        
+        .search-box { position: relative; }
+        
+        .search-box input {
+            width: 100%;
+            padding: 0.875rem 3rem 0.875rem 1.25rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(30, 74, 114, 0.1);
+        }
+        
+        .stats-badge {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #cbd5e1;
+        }
+
+        /* ===== تنسيقات مصغرات اليوتيوب المحسّنة ===== */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #000;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* حاوية المصغرة */
+        .video-thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+        
+        .video-thumbnail:hover {
+            transform: scale(1.03);
+        }
+        
+        .video-thumbnail:hover .play-button {
+            transform: translate(-50%, -50%) scale(1.15);
+            background: rgba(255, 0, 0, 1);
+        }
+        
+        .video-thumbnail::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.5) 100%);
+            pointer-events: none;
+        }
+        
+        /* زر التشغيل */
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 72px;
+            height: 52px;
+            background: rgba(255, 0, 0, 0.85);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        
+        .play-button::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 18px;
+            border-color: transparent transparent transparent white;
+            margin-right: 4px;
+        }
+        
+        /* شارة يوتيوب */
+        .youtube-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255, 0, 0, 0.95);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            z-index: 2;
+            backdrop-filter: blur(4px);
+        }
+        
+        .youtube-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hidden image for base64 -->
+    <img id="authorImage" src="data:image/png;base64,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" hidden alt="">
+
+    <div class="min-h-screen pb-12">
+
+        <!-- Header Section -->
+        <header class="relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#0f2b46] via-[#1e4a72] to-[#2c5f8d] opacity-95"></div>
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+            
+            <div class="relative container mx-auto px-4 py-12 md:py-16">
+                <div class="card bg-white/95 backdrop-blur-sm p-6 md:p-10">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="profile-image-container flex-shrink-0">
+                            <img id="profileImg" alt="الأستاذ الدكتور عبد الرزاق أحمد راشد المَعْمَري" class="profile-image">
+                        </div>
+                        
+                        <div class="flex-1 text-center md:text-right">
+                            <h1 class="text-3xl md:text-4xl lg:text-5xl mb-3 text-[#0f2b46]">
+                                الأستاذ الدكتور عبد الرزاق أحمد راشد المَعْمَري
+                            </h1>
+                            <p class="text-lg md:text-xl text-[#64748b] mb-6 font-medium">
+                                باحث أكاديمي متخصص في آثار ما قبل التاريخ في شبه الجزيرة العربية، مع إسهامات بارزة في دراسة عصور ما قبل التاريخ، وتوثيق التراث الأثري لجنوب الجزيرة العربية.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+                                <a href="https://independent.academia.edu/aalmaamary" target="_blank" class="btn-academic btn-primary">
+                                    <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                                    <span>أكاديميا</span>
+                                </a>
+                                <a href="https://orcid.org/0000-0003-3688-2618" target="_blank" class="btn-academic btn-gold">
+                                    <i data-lucide="badge-check" class="w-5 h-5"></i>
+                                    <span>ORCID</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 mt-8 md:mt-12">
+            <!-- Stats & Search -->
+            <div class="mb-8 flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between">
+                <div class="stats-badge flex items-center gap-3">
+                    <i data-lucide="book-open" class="w-6 h-6 text-[#1e4a72]"></i>
+                    <div>
+                        <p class="text-sm text-[#64748b]">إجمالي المؤلفات</p>
+                        <p class="text-2xl font-bold text-[#0f2b46]" id="totalCount">28</p>
+                    </div>
+                </div>
+                
+                <div class="search-box flex-1 max-w-md">
+                    <input type="text" id="searchInput" placeholder="ابحث في العناوين أو المجلات..." class="w-full">
+                    <i data-lucide="search" class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-[#64748b]"></i>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Section Title -->
+            <div class="mb-8">
+                <h2 class="text-2xl md:text-3xl text-[#0f2b46] mb-2 flex items-center gap-3">
+                    <i data-lucide="library" class="w-8 h-8 text-[#c9a74d]"></i>
+                    المؤلفات العلمية
+                </h2>
+                <p class="text-[#64748b]">مرتبة من الأحدث إلى الأقدم</p>
+            </div>
+
+            <!-- Publications Grid -->
+            <div id="publicationsContainer" class="space-y-5"></div>
+
+            <div class="divider"></div>
+
+            <!-- Videos Section -->
+            <div class="mb-8">
+                <h2 class="text-2xl md:text-3xl text-[#0f2b46] mb-2 flex items-center gap-3">
+                    <i data-lucide="youtube" class="w-8 h-8 text-[#c9a74d]"></i>
+                    محاضرات ولقاءات فيديو
+                </h2>
+                <p class="text-[#64748b]">محاضرات وبودكاست مع البروفيسور عبد الرزاق المَعْمَري</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Video 1 -->
+                <div class="card video-card p-5">
+                    <h3 class="text-lg font-bold text-[#0f2b46] mb-3">بودكاست سمة مع البروفوسور عبدالرزاق المعمري</h3>
+                    <div class="video-wrapper" data-video-id="hJ-HStwgYeE" data-video-title="بودكاست سمة">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/hJ-HStwgYeE/hqdefault.jpg');">
+                            <span class="youtube-badge">
+                                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                YouTube
+                            </span>
+                            <div class="play-button"></div>
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=hJ-HStwgYeE" target="_blank" class="inline-flex items-center gap-2 mt-4 text-[#1e4a72] hover:text-[#c9a74d] font-semibold transition-colors">
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                        <span>مشاهدة على يوتيوب</span>
+                    </a>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="card video-card p-5">
+                    <h3 class="text-lg font-bold text-[#0f2b46] mb-3">العصر الحجري</h3>
+                    <div class="video-wrapper" data-video-id="NoXeN-3wCKA" data-video-title="العصر الحجري">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/NoXeN-3wCKA/hqdefault.jpg');">
+                            <span class="youtube-badge">
+                                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                YouTube
+                            </span>
+                            <div class="play-button"></div>
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=NoXeN-3wCKA" target="_blank" class="inline-flex items-center gap-2 mt-4 text-[#1e4a72] hover:text-[#c9a74d] font-semibold transition-colors">
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                        <span>مشاهدة على يوتيوب</span>
+                    </a>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="card video-card p-5">
+                    <h3 class="text-lg font-bold text-[#0f2b46] mb-3">محاضرة مبادئ الصناعة الحجرية - 2017/3/15</h3>
+                    <div class="video-wrapper" data-video-id="T4W3EU5n2zI" data-video-title="مبادئ الصناعة الحجرية 2017">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/T4W3EU5n2zI/hqdefault.jpg');">
+                            <span class="youtube-badge">
+                                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                YouTube
+                            </span>
+                            <div class="play-button"></div>
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=T4W3EU5n2zI" target="_blank" class="inline-flex items-center gap-2 mt-4 text-[#1e4a72] hover:text-[#c9a74d] font-semibold transition-colors">
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                        <span>مشاهدة على يوتيوب</span>
+                    </a>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="card video-card p-5">
+                    <h3 class="text-lg font-bold text-[#0f2b46] mb-3">مبادئ الصناعة الحجرية الطور الثاني - 2019/4/10</h3>
+                    <div class="video-wrapper" data-video-id="x7XejSf7Erk" data-video-title="مبادئ الصناعة الحجرية الطور الثاني">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/x7XejSf7Erk/hqdefault.jpg');">
+                            <span class="youtube-badge">
+                                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                YouTube
+                            </span>
+                            <div class="play-button"></div>
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=x7XejSf7Erk" target="_blank" class="inline-flex items-center gap-2 mt-4 text-[#1e4a72] hover:text-[#c9a74d] font-semibold transition-colors">
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                        <span>مشاهدة على يوتيوب</span>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-16 bg-gradient-to-br from-[#0f2b46] to-[#1e4a72] text-white">
+            <div class="container mx-auto px-4 py-10">
+                <div class="card bg-white/10 backdrop-blur-md border-white/20 p-6 md:p-8">
+                    <div class="text-center">
+                        <div class="flex items-center justify-center gap-2 mb-4">
+                            <i data-lucide="facebook" class="w-6 h-6 text-[#c9a74d]"></i>
+                            <p class="text-lg md:text-xl font-semibold">
+                                تابعونا في مجموعة كتب تاريخ وآثار الجزيرة العربية على فيسبوك
+                            </p>
+                        </div>
+                        <a href="https://www.facebook.com/groups/arabia.books" target="_blank" 
+                           class="inline-flex items-center gap-2 text-[#c9a74d] hover:text-[#d4b65f] transition-colors font-medium">
+                            <span>زيارة المجموعة</span>
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                        
+                        <div class="divider opacity-30 my-6"></div>
+                        
+                        <p class="text-sm text-white/80">
+                            الصفحة من تصميم الدكتور صلاح الحسيني 2026
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const publications = [
+            { year: 2025, title: 'موقع جبل العقلة (الربع الخالي): من العصر الأشولي – ما بعد العصر الحجري الحديث (بالروسية)', titleEn: 'Jabal al-Uʿqla Site (Rubʿ al Khali): Acheulean – Post-Neolithic', author: 'Al Maamary, Abdarrazzaq Ahmad', journal: 'Paleolithic. Episodes and Trends 25, no. 1: 20–29', link: 'https://uavestnik.ru/en/uploads/pdf_articles/2025_1/2025_1_2.pdf' },
+            { year: 2024, title: 'الربوبية الذكورية وظهور القُرى والملكية الخاصة في الجزيرة العربية', author: 'المَعْمَري، عبد الرزاق بن أحمد راشد', journal: 'أدوماتو 50: 7–58. الرياض: مركز عبد الرحمن السديري الثقافي', link: 'https://www.facebook.com/groups/arabia.books/posts/27817749881194734/' },
+            { year: 2023, title: 'تصنيف دمى الصوان البشرية عالميًا بحسب الجنس وقراءة في الشكل والإيحاء', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'أدوماتو 47: 7–54', link: 'https://www.facebook.com/groups/arabia.books/posts/27806154022354320' },
+            { year: 2022, title: 'أدوات حجرية من شرق المملكة تكشف طرازًا جديدًا من التشابه بين أمريكا والجزيرة العربية والصحراء الأفريقية والشام واكتشاف إلهات في الثُّمَامَة وخِريصان', author: 'المَعْمَري، عبد الرزاق بن أحمد راشد', journal: 'مجلة الخليج للتاريخ والآثار 17: 13–105. جمعية التاريخ والآثار بدول مجلس التعاون الخليجي', link: 'https://www.facebook.com/groups/arabia.books/posts/27818033667833022/' },
+            { year: 2022, title: 'تقويم لمصنوعات حجرية في الجزيرة العربية والشام: من أدواتِ صيدٍ إلى دُمى آدمية وعلاقتها بمثيلاتها عالمياً وبتطور الفكر والعقيدة', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'آداب، العدد 47 (يوليو): 69–110. الخرطوم: كلية الآداب، جامعة الخرطوم', link: 'https://www.facebook.com/groups/arabia.books/posts/27818056974497358/' },
+            { year: 2017, title: 'التحقق من ثقافة ألدوان في جزيرة سقطرى', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'أدوماتو 35: 7–38', link: 'https://www.facebook.com/groups/arabia.books/posts/1485910508138697' },
+            { year: 2014, title: 'تقرير أولي عن أعمال الحقل لعام 2014 في جنوب غرب المملكة العربية السعودية: (1) مناطق جازان وعسير', titleEn: 'Preliminary Report on Fieldwork in Southwestern Saudi Arabia 2014', author: 'إنغليس، روبن، أنطوني سينكلير، أندرو شاتلوورث، عبد الرزاق المَعْمَري، وليم بد، نيكلاس هاوسمان، ماثيو ميريديث-ويليامز، عبد الله آل شريخ، سعود الغامدي، وجيف بيلي', authorEn: 'Inglis, Robyn, Anthony Sinclair, Andrew Shuttleworth, Abdullah Alsharekh, Niklas Hausmann, Abdarrazzaq Al-Maamary, Matthew Meredith-Williams, Maud Devès, Saud Al Ghamdi, and Geoff Bailey', link: 'https://www.researchgate.net/profile/Robyn-Inglis-3/publication/265736778' },
+            { year: 2014, title: 'العصر الحجري القديم اللاحق في الجزيرة العربية', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'دراسات في علم الآثار والتراث 1 (5): 17–101. الجمعية السعودية للدراسات الأثرية', link: 'https://www.facebook.com/groups/arabia.books/posts/27805893965713659/' },
+            { year: 2013, title: 'الأثر البيئي في غياب العصر الحجري الوسيط التقليدي وإشكالية الانتقال إلى العصر الحجري الحديث في الجزيرة العربية', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'في: أبحاث ندوة الإنسان والبيئة في الوطن العربي في ضوء الاكتشافات الآثارية (4–6 مايو 2010)، ص87–118. الرياض: مؤسسة عبد الرحمن السديري الخيرية', link: 'https://www.facebook.com/groups/arabia.books/posts/646720825391007/' },
+            { year: 2012, title: 'أعمال مشروع البحر الأحمر وجزر فرسان (آثار الساحل لما قبل التاريخ في الإقليم الجنوبي الغربي) للبعثة السعودية البريطانية المشتركة 2004–2006م', author: 'بيلي، جيف وآخرون', journal: 'أطلال 22: 88–101', link: 'https://www.facebook.com/groups/arabia.books/posts/27817647724538283/' },
+            { year: 2012, title: 'أدوات صيد غير تقليدية من عصور ما قبل التاريخ في الجزيرة العربية', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'المجلة الأردنية للتاريخ والآثار 6 (3): 139–174', link: 'https://www.facebook.com/groups/arabia.books/posts/646720825391007/' },
+            { year: 2012, title: 'إشكالية الانتقال إلى العصر الحجري الحديث في الجزيرة العربية', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'مجلة الإكليل; العدد 40 (يونيو): 122–163. صنعاء: وزارة الثقافة', link: 'https://www.facebook.com/groups/arabia.books/posts/27822620560707666/' },
+            { year: 2011, title: 'تعقيب حول مقال تحقيب دراسات ما قبل التاريخ في شبه الجزيرة العربية', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'مجلة الدارة 2: 235–236', link: 'https://www.facebook.com/groups/arabia.books/posts/636282916434798' },
+            { year: 2010, title: 'تحقيب دراسات ما قبل التاريخ في شبه الجزيرة العربية', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'مجلة الدارة 36 (3): 167–260', link: 'https://www.facebook.com/groups/arabia.books/posts/636285566434533' },
+            { year: 2009, title: 'مراحل دراسة عصور ما قبل التاريخ في شبه الجزيرة العربية وسماتها العامة', author: 'المَعْمَري، عبدالرزاق', journal: 'مجلة جامعة صنعاء للعلوم الاجتماعية والإنسانية، ع5: 69–110' },
+            { year: 2009, title: 'دراسات العصر الحجري الحديث في جنوبي الجزيرة العربية: نقد المصادر واستخلاص النتائج', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'أدوماتو 20: 7–38', link: 'https://www.facebook.com/groups/arabia.books/posts/636271576435932' },
+            { year: 2008, title: 'مشروع الأنثروبولوجيا القديمة في باب المندب في اليمن', titleEn: 'The Bab al-Mandab Paleoanthropology Project in Yemen', author: 'شوهان، ب. ر.، س. علي عثمان، أ. المخلافي، و ع. المَعْمَري', authorEn: 'Chauhan, P. R., S. Ali Othman, A. Al-Mikhlafi, and A. Al-Maʿammary', journal: 'معرض مشروع العصور القديمة 82 (318): 1–4', link: 'https://www.facebook.com/groups/arabia.books/posts/27806068955696160' },
+            { year: 2008, title: 'موروث العصور الحجرية ودوره في تشكل قرى ومدن حضارة جنوبي الجزيرة', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'في: المدينة في الوطن العربي في ضوء الاكتشافات الأثرية، ص7–34', link: 'https://www.facebook.com/groups/arabia.books/posts/636277839768639' },
+            { year: 2006, title: 'مخلفات أثرية لإنسان ما قبل التاريخ في حوض صنعاء', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'في: الندوة العلمية الأولى للآثار اليمنية (1996م)، ص23–59', link: 'https://www.facebook.com/photo/?fbid=144061805767101' },
+            { year: 2005, title: 'النمط الأثري الصحراوي وعلاقته بمرتفعات جنوبي الجزيرة العربية وتهامة وعُمان', author: 'المَعْمَري، عبدالرزاق بن راشد', journal: 'أدوماتو 12: 7–28', link: 'https://www.facebook.com/groups/arabia.books/posts/27817659267870462' },
+            { year: 2005, title: 'النمط الأثري الصحراوي في العصر الحجري الحديث وعلاقته بالمرتفعات الجنوبية الغربية من الجزيرة العربية', author: 'المَعْمَري، عبدالرزاق بن راشد', journal: 'صنعاء الحضارة والتاريخ، ج1، 373 - 418', link: 'https://www.facebook.com/groups/arabia.books/' },
+            { year: 2003, title: 'العصور الحجرية وموروثاتها في اليمن، الموسوعة اليمنية', author: 'المَعْمَري: عبدالرزاق راشد', journal: 'مج3، مؤسسة العفيف الثقافية - صنعاء، ص2075-2088', link: 'https://www.facebook.com/groups/arabia.books/posts/461592420570516/' },
+            { year: 2002, title: 'إضافات جديدة في تقسيم العصر الحجري الحديث في صحراء الجزيرة العربية', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'أدوماتو 5: 23–42', link: 'https://www.facebook.com/groups/arabia.books/posts/636273756435714' },
+            { year: 2002, title: 'مواد أثرية من طبقات جيولوجية من الحرم الجامعي لجامعة صنعاء', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'حوليات يمنية، العدد 1: 23–38', link: 'https://www.facebook.com/groups/arabia.books/posts/27821818530787869/' },
+            { year: 2001, title: 'دراسات العصر الحجري الحديث في شبه الجزيرة العربية: الوضع الراهن والمشاكل (بالروسية)', titleEn: 'Neolithic Studies in the Arabian Peninsula: Current Status and Problems', author: 'المَعْمَري، عبد الرزاق', authorEn: 'Al-Mamari, A. A. R.', journal: 'علم الآثار الروسي 1: 5–14', link: 'https://www.facebook.com/groups/arabia.books/posts/27805827422386980' },
+            { year: 2000, title: 'ثقافتان من العصر الحجري الحديث في الجزيرة العربية', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'أدوماتو 1: 7–29', link: 'https://www.facebook.com/groups/arabia.books/posts/636273039769119' },
+            { year: 1995, title: 'العصر الحجري الحديث في جنوب الجزيرة العربية', author: 'المَعْمَري، عبد الرزاق أحمد راشد', journal: 'مجلة الثقافة : العدد 20 ، ص 98- 112', link: 'https://www.facebook.com/groups/arabia.books/posts/27839756925660696' },
+            { year: 1993, title: 'حول تعزيز أدوات العصر الحجري الحديث من جنوب الجزيرة العربية (بالروسية)', titleEn: 'On the Enhancement of Neolithic Tools from Southern Arabia', author: 'المَعْمَري، عبد الرزاق', authorEn: 'Al-Mamary, A. A. R.', journal: 'علم الآثار الروسي 2: 24–33', link: 'https://www.facebook.com/groups/arabia.books/posts/27805796205723435' }
+        ];
+
+        function renderPublications(pubs) {
+            const container = document.getElementById('publicationsContainer');
+            container.innerHTML = '';
+            
+            pubs.forEach((pub, index) => {
+                const card = document.createElement('div');
+                card.className = 'card publication-card p-5 md:p-6';
+                
+                card.innerHTML = `
+                    <div class="flex flex-col md:flex-row md:items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <span class="year-badge">${pub.year}</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-lg md:text-xl font-bold text-[#0f2b46] mb-2 leading-relaxed">${pub.title}</h3>
+                            ${pub.titleEn ? `<p class="text-sm md:text-base text-[#64748b] mb-3 italic" dir="ltr" lang="en">${pub.titleEn}</p>` : ''}
+                            <div class="space-y-2">
+                                <p class="text-sm text-[#475569]"><span class="font-semibold">المؤلف:</span> ${pub.author}</p>
+                                ${pub.authorEn ? `<p class="text-sm text-[#64748b]" dir="ltr" lang="en"><span class="font-semibold">Author:</span> ${pub.authorEn}</p>` : ''}
+                                ${pub.journal ? `<p class="text-sm text-[#475569] leading-relaxed"><span class="font-semibold">النشر:</span> ${pub.journal}</p>` : ''}
+                            </div>
+                            ${pub.link ? `
+                                <div class="mt-4">
+                                    <a href="${pub.link}" target="_blank" class="inline-flex items-center gap-2 text-[#1e4a72] hover:text-[#c9a74d] font-semibold transition-colors group">
+                                        <i data-lucide="link-2" class="w-4 h-4"></i>
+                                        <span>عرض المصدر</span>
+                                        <i data-lucide="arrow-up-left" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                    </a>
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+            
+            lucide.createIcons();
+        }
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const filtered = publications.filter(pub => {
+                const titleMatch = pub.title.toLowerCase().includes(searchTerm) || 
+                                 (pub.titleEn && pub.titleEn.toLowerCase().includes(searchTerm));
+                const journalMatch = pub.journal && pub.journal.toLowerCase().includes(searchTerm);
+                const authorMatch = pub.author.toLowerCase().includes(searchTerm) ||
+                                  (pub.authorEn && pub.authorEn.toLowerCase().includes(searchTerm));
+                return titleMatch || journalMatch || authorMatch;
+            });
+            renderPublications(filtered);
+            document.getElementById('totalCount').textContent = filtered.length;
+        });
+
+        // ===== تحميل فيديو يوتيوب عند النقر على المصغرة =====
+        function loadVideo(wrapper) {
+            const videoId = wrapper.dataset.videoId;
+            const title = wrapper.dataset.videoTitle || 'فيديو';
+            
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+            iframe.title = title;
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+            iframe.allowFullscreen = true;
+            iframe.setAttribute('loading', 'lazy');
+            
+            wrapper.innerHTML = '';
+            wrapper.appendChild(iframe);
+        }
+
+        // ربط حدث النقر بجميع مصغرات الفيديو
+        document.querySelectorAll('.video-thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                const wrapper = this.closest('.video-wrapper');
+                loadVideo(wrapper);
+            });
+        });
+
+        // Load image from hidden element & render publications
+        window.addEventListener('DOMContentLoaded', () => {
+            const hiddenImg = document.getElementById('authorImage');
+            const profileImg = document.getElementById('profileImg');
+            profileImg.src = hiddenImg.src;
+            
+            renderPublications(publications);
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

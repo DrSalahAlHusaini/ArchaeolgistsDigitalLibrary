@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤلفات البروفسور جمال الحسني</title>
+    <!-- تضمين خطوط جوجل الأنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- تضمين أيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #5c3d2e; /* بني أثري */
+            --secondary-color: #865439; /* بني فاتح */
+            --accent-color: #c69b7b; /* ذهبي رملي */
+            --light-bg: #f8f5f1; /* بيج ناعم خلفية */
+            --dark-text: #2d2424;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.8;
+        }
+
+        /* الهيدر والبروفايل */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        .profile-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid var(--white);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .profile-avatar i {
+            font-size: 50px;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-family: 'Amiri', serif;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .university {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+        }
+
+        /* الروابط الأكاديمية */
+        .academic-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .academic-links a {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: var(--white);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .academic-links a:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* المحتوى الرئيسي */
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-family: 'Amiri', serif;
+            font-size: 2rem;
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* قائمة الأبحاث */
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .publication-card {
+            background-color: var(--white);
+            border-right: 6px solid var(--secondary-color);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-right-color: var(--accent-color);
+        }
+
+        /* تنسيق الهيدر الداخلي للبطاقة (العام والعنوان) */
+        .pub-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .pub-year {
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 6px;
+            min-width: 75px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(92, 61, 46, 0.2);
+            font-family: monospace, 'Cairo';
+        }
+
+        .pub-title {
+            font-size: 1.25rem;
+            color: var(--dark-text);
+            font-weight: 700;
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        .pub-details {
+            font-size: 0.95rem;
+            color: #555;
+            padding-bottom: 12px;
+            border-bottom: 1px dotted #e0e0e0;
+            padding-right: 90px; /* محاذاة النص مع بداية العنوان وتخطي خانة السنة */
+        }
+
+        /* زر التحميل البارز أسفل كل بحث */
+        .download-btn-container {
+            display: flex;
+            justify-content: flex-start;
+            padding-right: 90px; /* محاذاة الزر مع بداية العنوان */
+        }
+
+        .download-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--light-bg);
+            color: var(--secondary-color);
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(134, 84, 57, 0.2);
+            transition: var(--transition);
+        }
+
+        .download-link i {
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .download-link:hover {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border-color: var(--secondary-color);
+            box-shadow: 0 4px 10px rgba(134, 84, 57, 0.15);
+        }
+
+        .download-link:hover i {
+            transform: translateY(2px);
+        }
+
+        /* الفوتر برعاية وتصميم */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .footer-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .sponsor-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sponsor-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .sponsor-box p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto 15px;
+        }
+
+        .fb-group-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #1877f2; /* لون فيسبوك */
+            color: var(--white);
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .fb-group-btn:hover {
+            background-color: #145dbf;
+            transform: translateY(-2px);
+        }
+
+        .rights {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* التوافق مع الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            header { padding: 50px 15px 40px; }
+            h1 { font-size: 2rem; }
+            .pub-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .pub-year { width: auto; min-width: auto; }
+            .pub-details, .download-btn-container { padding-right: 0; }
+            .academic-links { flex-direction: column; width: 100%; max-width: 300px; }
+            .academic-links a { justify-content: center; }
+            .download-link { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر والتعريف بالبروفسور -->
+    <header>
+        <div class="profile-container">
+            <div class="profile-avatar">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h1>البروفسور جمال محمد ناصر الحسني</h1>
+            <p class="subtitle">أستاذ آثار وحضارة اليمن القديم</p>
+            <p class="university">عميد كلية الآداب - جامعة عدن</p>
+            
+            <!-- الروابط الأكاديمية -->
+            <div class="academic-links">
+                <a href="https://aden-univ.academia.edu/gamalmohammed" target="_blank">
+                    <i class="fa-solid fa-university"></i> Academia.edu
+                </a>
+                <a href="https://orcid.org/0000-0002-2142-1117" target="_blank">
+                    <i class="fa-brands fa-orcid"></i> ORCID
+                </a>
+                <a href="https://scholar.google.com/citations?user=zFFd72YAAAAJ&hl=ar" target="_blank">
+                    <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+                </a>
+                <a href="https://www.researchgate.net/profile/ad-jmal-alhsny" target="_blank">
+                    <i class="fa-brands fa-researchgate"></i> ResearchGate
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي والأبحاث -->
+    <main>
+        <h2 class="section-title">قائمة المؤلفات والأبحاث العلمية</h2>
+        
+        <div class="publications-list">
+            
+            <!-- بحث 1 -->
+            <div class="publication-card">
+                <div class="pub-header">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-title">نقوش قتبانية إهدائية جديدة</div>
+                </div>
+                <div class="pub-details">مجلة دراسات في تاريخ الجزيرة العربية وحضارتها، المجلد الثالث العدد الثاني، ص 131 - 162</div>
+                <div class="download-btn-container">
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/26741758968793836/" class="download-link" target="_blank">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> انقر لتحميل البحث
+                    </a>
+                </div>
+            </div>
+
+            <!-- بحث 2 -->
+            <div class="publication-card">
+                <div class="pub-header">
+                    <div class="pub-year">2021</div>
+                    <div class="pub-title">العربة في جنوب شبه الجزيرة العربية</div>
+                </div>
+                <div class="pub-details">مجلة العلوم الاجتماعية والانسانية، مج 14، ع 41، جامعة عدن، ص 225-259</div>
+                <div class="download-btn-container">
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/27927303710239350/" class="download-link" target="_blank">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> انقر لتحميل البحث
+                    </a>
+                </div>
+            </div>
+
+            <!-- بحث 3 -->
+            <div class="publication-card">
+                <div class="pub-header">
+                    <div class="pub-year">2021</div>
+                    <div class="pub-title">ملك أوساني يُذكَر لأوَّل مرَّة وقائمة جديدة بأسماء ملوك أوسان</div>
+                </div>
+                <div class="pub-details">مجلة جامعة الملك خالد للدراسات التاريخية والحضارية، مج 2، ع 1، يناير 2021، ص 65 - 94</div>
+                <div class="download-btn-container">
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/5028771823852530/" class="download-link" target="_blank">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> انقر لتحميل البحث
+                    </a>
+                </div>
+            </div>
+
+            <!-- بحث 4 -->
+            <div class="publication-card">
+                <div class="pub-header">
+                    <div class="pub-year">2021</div>
+                    <div class="pub-title">نقوش ملكية اوسانية جديدة</div>
+                </div>
+                <div class="pub-details"><span style="color:#865439; font-weight:600;">بالاشتراك مع: محمد عوض باعليان</span> | مجلة جامعة عدن الاليكترونية للعلوم الإنسانية والاجتماعية، مج2 ع1، ص 35 - 48</div>
+                <div class="download-btn-container">
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/4140423886020666" class="download-link" target="_blank">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> انقر لتحميل البحث
+                    </a>
+                </div>
+            </div>
+
+            <!-- بحث 5 -->
+            <div class="publication-card">
+                <div class="pub-header">
+                    <div class="pub-year">2020</div>
+                    <div class="pub-title">دثينة في تاريخها القديم من خلال النقوش</div>
+                </div>
+                <div class="pub-details">دراسات تاريخية، ع4، مركز عدن للدراسات والبحوث التاريخية والنشر، ص 5- 63</div>
+                <div class="download-btn-container">
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/3693260754070317/" class="download-link" target="_blank">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> انقر لتحميل البحث
+                    </a>
+                </div>
+            </div>
+
+            <!-- بحث 6 -->
+            <div class="publication-card">
+                <div class="pub-header">
+                    <div class="pub-year">2020</div>
+                    <div class="pub-title">بلو ذو حبم في نقش أوساني جديد</div>
+                </div>
+                <div class="pub-details">مجلة العبر للدراسات التاريخية والأثرية، مج 3، ع 2، سبتمبر 2020، ص 29- 49</div>
+                <div class="download-btn-container">
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/3922695461126844/" class="download-link" target="_blank">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> انقر لتحميل البحث
+                    </a>
+                </div>
+            </div>
+
+            <!-- بحث 7 -->
+            <div class="publication-card">
+                <div class="pub-header">
+                    <div class="pub-year">2017</div>
+                    <div class="pub-title">نقش تذكاري حميري من الضالع</div>
+                </div>
+                <div class="pub-details">مجلة جامعة عدن الالكترونية، العدد 7، يناير 2017، ص 29-50.</div>
+                <div class="download-btn-container">
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/1559487560780991/" class="download-link" target="_blank">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> انقر لتحميل البحث
+                    </a>
+                </div>
+            </div>
+
+            <!-- بحث 8 -->
+            <div class="publication-card">
+                <div class="pub-header">
+                    <div class="pub-year">2015</div>
+                    <div class="pub-title">نص قانوني لملك قتباني يُذكر لأول مرة</div>
+                </div>
+                <div class="pub-details">مجلة حولية كلية الآداب، ع 11و12، جامعة عدن، 2014 و2015، ص 287 - 322</div>
+                <div class="download-btn-container">
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/2001234216606321/" class="download-link" target="_blank">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> انقر لتحميل البحث
+                    </a>
+                </div>
+            </div>
+
+            <!-- بحث 9 -->
+            <div class="publication-card">
+                <div class="pub-header">
+                    <div class="pub-year">2015</div>
+                    <div class="pub-title">ثلاثة نقوش جديدة تذكر الإله الأوساني (بلو)</div>
+                </div>
+                <div class="pub-details">
+                    <span style="color:#865439; font-weight:600;">بالاشتراك مع: أحمد بن أحمد باطايع</span> | 
+                    Pre-Islamic South Arabia and its Neighbours: New developments of Research. Proceedings of the 17th Rencontres Sabéennes held in Paris, 6–8 June 2013, BAR International Series 2740, 2015، ص 81- 91
+                </div>
+                <div class="download-btn-container">
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/1012814005448352/" class="download-link" target="_blank">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> انقر لتحميل البحث
+                    </a>
+                </div>
+            </div>
+
+            <!-- بحث 10 -->
+            <div class="publication-card">
+                <div class="pub-header">
+                    <div class="pub-year">2015</div>
+                    <div class="pub-title">ثلاثة نقوش قتبانية جديدة تذكر الإلهة ”ذات فنوتم“</div>
+                </div>
+                <div class="pub-details">
+                    Pre-Islamic South Arabia and its Neighbours: New developments of Research. Proceedings of the 17th Rencontres Sabéennes held in Paris, 6–8 June 2013, BAR International Series 2740, 2015، ص 43-53
+                </div>
+                <div class="download-btn-container">
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/1012813542115065/" class="download-link" target="_blank">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> انقر لتحميل البحث
+                    </a>
+                </div>
+            </div>
+
+            <!-- بحث 11 -->
+            <div class="publication-card">
+                <div class="pub-header">
+                    <div class="pub-year">2012</div>
+                    <div class="pub-title">الإله عم وآلھة قتبان ( 700 ق.م – 170 م)</div>
+                </div>
+                <div class="pub-details">أطروحة دكتوراه، قسم التاريخ كلية الآداب، جامعة طنطا، 2012.</div>
+                <div class="download-btn-container">
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/1012812715448481/" class="download-link" target="_blank">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> انقر لتحميل البحث
+                    </a>
+                </div>
+            </div>
+
+            <!-- بحث 12 -->
+            <div class="publication-card">
+                <div class="pub-header">
+                    <div class="pub-year">2011</div>
+                    <div class="pub-title">نقوش قتبانية جديدة من متحف جامعة عدن</div>
+                </div>
+                <div class="pub-details">في كتاب: الندوة العلمية "عدن بوابة اليمن الحضارية" 18-19 يناير 2011م. جامعة عدن 2011. ص445- 458</div>
+                <div class="download-btn-container">
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/486749864721438/" class="download-link" target="_blank">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> انقر لتحميل البحث
+                    </a>
+                </div>
+            </div>
+
+            <!-- بحث 13 -->
+            <div class="publication-card">
+                <div class="pub-header">
+                    <div class="pub-year">2013</div>
+                    <div class="pub-title">الإله سين في ديانة حضرموت القديمة دراسة من خلال النقوش والآثار</div>
+                </div>
+                <div class="pub-details">رسالة ماجستير 2006 (نشرت عن: دار جامعة عدن 2013)</div>
+                <div class="download-btn-container">
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/25559559050347173" class="download-link" target="_blank">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> انقر لتحميل البحث
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- الفوتر برعاية وتصميم -->
+    <footer>
+        <div class="footer-container">
+            <div class="sponsor-box">
+                <h3>مجموعة كتب تاريخ وآثار الجزيرة العربية</h3>
+                <p>مكتبة رقمية متخصصة في تاريخ وآثار وتراث شبه الجزيرة العربية واليمن القديم. تضم أعمالاً أكاديمية وبحثية ما بين رسائل جامعية وأبحاث محكمة في كبرى المجلات العلمية.</p>
+                <a href="https://www.facebook.com/groups/arabia.books" class="fb-group-btn" target="_blank">
+                    <i class="fa-brands fa-facebook"></i> تابعونا على الفيسبوك
+                </a>
+            </div>
+            <p class="rights">الصفحة برعاية وتصميم الدكتور صلاح الحسيني 2026 &copy;</p>
+        </div>
+    </footer>
+
+</body>
+</html>

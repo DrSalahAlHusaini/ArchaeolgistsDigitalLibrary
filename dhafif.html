@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مؤلفات الدكتور عبدالله حسين العزي الذفيف</title>
+    <!-- خطوط عربية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+        /* ===== المتغيرات ===== */
+        :root {
+            --primary-color: #4a2c1a;
+            --secondary-color: #6b3f28;
+            --accent-color: #c9a87c;
+            --accent-hover: #b0885a;
+            --bg-light: #fdfbf7;
+            --text-dark: #1f2421;
+            --text-muted: #6c757d;
+            --card-bg: #ffffff;
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+            --shadow-hover: 0 8px 28px rgba(0, 0, 0, 0.10);
+            --radius: 10px;
+        }
+
+        /* ===== إعادة ضبط ===== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        h1,
+        h2,
+        h3,
+        .profile-title {
+            font-family: 'Amiri', serif;
+        }
+
+        /* ===== الهيدر ===== */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0.05;
+            background-image: url('https://www.transparenttextures.com/patterns/sandpaper.png');
+            pointer-events: none;
+        }
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-badge {
+            background-color: rgba(255, 255, 255, 0.10);
+            display: inline-block;
+            padding: 5px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            letter-spacing: 0.3px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 25px;
+            font-weight: 300;
+            opacity: 0.92;
+        }
+
+        .profile-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-profile {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid var(--accent-color);
+            padding: 8px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        .btn-profile:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* ===== المحتوى الرئيسي ===== */
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2.1rem;
+            color: var(--primary-color);
+            margin-bottom: 35px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* ===== بطاقات المؤلفات ===== */
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 60px;
+        }
+
+        .pub-card {
+            background: var(--card-bg);
+            border-right: 5px solid var(--accent-color);
+            border-radius: 4px;
+            padding: 22px 25px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .pub-card:hover {
+            transform: scale(1.005);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .pub-info {
+            flex: 1;
+        }
+
+        .pub-meta {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .pub-year {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 2px 14px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .pub-author {
+            color: var(--secondary-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            background-color: #f1ece7;
+            padding: 2px 12px;
+            border-radius: 4px;
+        }
+
+        .pub-title {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .pub-journal {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-pub-link {
+            background-color: #1877f2;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+            align-self: center;
+            flex-shrink: 0;
+        }
+        .btn-pub-link:hover {
+            background-color: #145dbf;
+        }
+
+        /* ===== التذييل ===== */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 4px solid var(--accent-color);
+        }
+        .footer-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .footer-sponsor {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .footer-group-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .footer-group-box h4 {
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .btn-facebook {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #1877f2;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 28px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn-facebook:hover {
+            background-color: #145dbf;
+        }
+        .footer-desc {
+            font-size: 0.9rem;
+            color: #b3c5d7;
+            max-width: 700px;
+            margin: 15px auto 0;
+            line-height: 1.7;
+        }
+
+        /* ===== استجابة ===== */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1.05rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .pub-card {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 18px;
+            }
+            .btn-pub-link {
+                text-align: center;
+                justify-content: center;
+                align-self: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== الهيدر ===== -->
+    <header>
+        <div class="header-container">
+            <span class="profile-badge">المؤلفات الأكاديمية الكاملة</span>
+            <h1>الدكتور عبدالله حسين العزي الذفيف</h1>
+            <p class="subtitle">مؤرخ متخصص في تاريخ اليمن القديم | دراسات سبئية وقتبانية وريدانية ومعينية</p>
+
+            <div class="profile-links">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== المحتوى الرئيسي ===== -->
+    <main>
+
+        <!-- ===== قائمة المؤلفات مرتبة من الأحدث إلى الأقدم ===== -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-book-open"></i> قائمة المؤلفات والأبحاث العلمية</h2>
+
+            <div class="publications-list">
+
+                <!-- 2026 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2026</span>
+                        </div>
+                        <h3 class="pub-title">نقوش توزيع الأضاحي والإهداءات وبناء المنشآت العمرانية في مدينة يثل (براقش) الجوف</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة ريدان، العدد 20، الهيئة العامة للآثار والمتاحف، صنعاء، ص 99-154.</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/27307899138846480/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2025 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2025</span>
+                        </div>
+                        <h3 class="pub-title">دراسة تاريخية لثلاثة نقوش زراعية لقبيلة سبأ كهلان من محرم بلقيس</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة ريدان، العدد 16، الهيئة العامة للآثار والمتاحف، صنعاء، ص 69-98.</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/27269601126009615/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2025</span>
+                        </div>
+                        <h3 class="pub-title">نقشان سبئيان من معبد شبعان في مدينة نشق البيضاء بالجوف</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة ريدان، العدد 17، الهيئة العامة للآثار والمتاحف، صنعاء، ص 269-293.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/27283195587983502/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2025</span>
+                        </div>
+                        <h3 class="pub-title">الاسترقاق بالدَّينِ والخِصاءُ في اليمن القديم</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة ريدان، العدد 18، الهيئة العامة للآثار والمتاحف، صنعاء، ص 331-356.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/27294825263487201/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2025</span>
+                        </div>
+                        <h3 class="pub-title">نقوش من مدينة يثل (براقش حالياً) الجوف</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة ريدان، العدد 19، الهيئة العامة للآثار والمتاحف، صنعاء، ص 97-124.</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/27305192892450438/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2024 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2024</span>
+                        </div>
+                        <h3 class="pub-title">نقشان سبئيان من محرم بلقيس (معبد أوام)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة ريدان، العدد 12، الهيئة العامة للآثار والمتاحف، صنعاء، ص 87-119.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/27210554001914328/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2024</span>
+                        </div>
+                        <h3 class="pub-title">نقوش من عهد الملك السبئي وهب إيل يحوز وابنيه كرب إل وتر يهنعم، وأنمار يهأمن</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة ريدان، العدد 13، الهيئة العامة للآثار والمتاحف، صنعاء، ص 146-182.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/27229445646691830/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2024</span>
+                        </div>
+                        <h3 class="pub-title">نقوش سبئية من عهد نشأكرب يهأمن يهرحب (الثاني) ملك سبأ وذي ريدان</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة ريدان، العدد 14، الهيئة العامة للآثار والمتاحف، صنعاء، ص 405-450.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/27229341356702259/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2024</span>
+                        </div>
+                        <h3 class="pub-title">رُحابة وقصر خوّان .. بين الخبر والأثر</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة ريدان، العدد 14، الهيئة العامة للآثار والمتاحف، صنعاء، ص 549-587.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/27239194935716901/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2024</span>
+                        </div>
+                        <h3 class="pub-title">خمسة نقوش سبئية من محرم بلقيس (معبد أوام) مارب</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة ريدان، العدد 15، الهيئة العامة للآثار والمتاحف، صنعاء، ص 124-151.</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/27255734547396273/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2020 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2020</span>
+                        </div>
+                        <h3 class="pub-title">نقش سبئي جديد على تمثال من النحاس للقيل يدوم الجرتي (الذفيف 1 -1 AL-Dhafeef)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة آداب الحديدة، العدد 6، يوليو - سبتمبر 2020، ص 30-57.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/27203682979268097/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2018 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2018</span>
+                        </div>
+                        <h3 class="pub-title">مملكة قتبان من القرن الثاني ق.م حتى سقوطها</h3>
+                        <p class="pub-journal"><i class="fas fa-trophy"></i> أطروحة دكتوراه، كلية الآداب، جامعة صنعاء.</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/3294614637268266/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2007 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2007</span>
+                        </div>
+                        <h3 class="pub-title">مملكة قتبان من القرن السابع حتى نهاية القرن الثاني ق.م</h3>
+                        <p class="pub-journal"><i class="fas fa-graduation-cap"></i> رسالة ماجستير، كلية الآداب، جامعة صنعاء.</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/932446086818478/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== تم حذف تبويب الفيديوهات لعدم وجود محتوى مرئي ===== -->
+
+    </main>
+
+    <!-- ===== التذييل ===== -->
+    <footer>
+        <div class="footer-container">
+            <p class="footer-sponsor">الصفحة برعاية وتصميم الدكتور صلاح الحسيني 2026 ©</p>
+
+            <div class="footer-group-box">
+                <h4>تابعونا على الفيسبوك</h4>
+                <p>في مجموعة: <strong>كتب تاريخ وآثار الجزيرة العربية</strong></p>
+                <a href="https://www.facebook.com/groups/arabia.books" target="_blank" class="btn-facebook">
+                    <i class="fab fa-facebook"></i> الانضمام للمجموعة
+                </a>
+            </div>
+
+            <p class="footer-desc">
+                مكتبة رقمية متخصصة في تاريخ وآثار وتراث شبه الجزيرة العربية واليمن القديم.
+                تضم أعمالاً أكاديمية وبحثية ما بين رسائل جامعية وأبحاث محكمة في كبرى المجلات العلمية.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

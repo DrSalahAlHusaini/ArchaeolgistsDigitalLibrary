@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مكتبة آثار اليمن الرقمية – بوابة الباحثين</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #f5efe9;
+            background-image: radial-gradient(ellipse at 20% 50%, rgba(180,150,120,0.06) 0%, transparent 70%);
+            color: #2a241f;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255,252,247,0.92);
+            backdrop-filter: blur(4px);
+            border-radius: 56px 56px 40px 40px;
+            box-shadow: 0 30px 60px -16px rgba(0,0,0,0.2);
+            padding: 2.8rem 2.2rem;
+            border: 1px solid rgba(190,165,140,0.2);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #dac9b8;
+            padding-bottom: 2rem;
+            margin-bottom: 2.8rem;
+            position: relative;
+        }
+        .header::after {
+            content: "◆";
+            position: absolute;
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f5efe9;
+            padding: 0 18px;
+            font-size: 1.6rem;
+            color: #a67b5b;
+        }
+        .header h1 {
+            font-family: 'Amiri', serif;
+            font-weight: 700;
+            font-size: 2.6rem;
+            color: #3d2b1f;
+            letter-spacing: 0.5px;
+        }
+        .header h1 i { color: #a67b5b; font-size: 2rem; }
+        .header .subtitle {
+            font-size: 1.15rem;
+            color: #5f4a38;
+            font-weight: 300;
+            background: #ece2d8;
+            display: inline-block;
+            padding: 0.3rem 2.2rem;
+            border-radius: 60px;
+            margin-top: 10px;
+        }
+        .header .subtitle i { margin-left: 8px; color: #a67b5b; }
+        .header .desc {
+            margin-top: 12px;
+            font-size: 0.95rem;
+            color: #9b7e60;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .card {
+            background: #fffcf8;
+            border-radius: 20px;
+            padding: 1.8rem 1.5rem;
+            text-align: center;
+            border: 1px solid #ede4db;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.02);
+            transition: all 0.25s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #cbb19b;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+            background: #fffefa;
+        }
+        .card .icon {
+            font-size: 2.8rem;
+            color: #a67b5b;
+            margin-bottom: 0.5rem;
+        }
+        .card h3 {
+            font-family: 'Amiri', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #3d2b1f;
+            margin-bottom: 0.2rem;
+        }
+        .card p {
+            font-size: 0.85rem;
+            color: #5f4a38;
+            opacity: 0.8;
+        }
+        .card .badge {
+            display: inline-block;
+            background: #ece2d8;
+            padding: 0.1rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            color: #5f4a38;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2.2rem;
+            border-top: 2px solid #dac9b8;
+            text-align: center;
+            color: #3d2b1f;
+        }
+        footer .sponsor {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.4rem;
+        }
+        footer .sponsor i { color: #a67b5b; margin: 0 6px; }
+        footer .copy {
+            font-size: 0.85rem;
+            color: #7a5f4a;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 1.6rem 1rem; border-radius: 32px; }
+            .header h1 { font-size: 1.9rem; }
+            .grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+            .card { padding: 1.2rem 0.8rem; }
+            .card h3 { font-size: 1.1rem; }
+        }
+        @media (max-width: 480px) {
+            .grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <h1><i class="fas fa-scroll"></i> مكتبة آثار اليمن الرقمية <i class="fas fa-feather-alt"></i></h1>
+        <div class="subtitle"><i class="fas fa-book-open"></i> أرشيف شامل لمؤلفات رواد الآثار اليمنية</div>
+        <p class="desc">يضم الموقع 10 من أعلام الباحثين في تاريخ وحضارة اليمن القديم</p>
+    </div>
+
+    <div class="grid">
+
+        <a href="khnoman.html" class="card">
+            <div class="icon"><i class="fas fa-user-graduate"></i></div>
+            <h3>خلدون هزاع عبده نعمان</h3>
+            <p>باحث وآثارى يمني</p>
+            <span class="badge">14 مؤلفاً</span>
+        </a>
+
+        <a href="asholan.html" class="card">
+            <div class="icon"><i class="fas fa-user-graduate"></i></div>
+            <h3>عميدة شعلان</h3>
+            <p>أستاذ آثار وحضارة اليمن القديم</p>
+            <span class="badge">20+ مؤلفاً</span>
+        </a>
+
+        <a href="khzubaidi.html" class="card">
+            <div class="icon"><i class="fas fa-user-graduate"></i></div>
+            <h3>خيران محسن الزبيدي</h3>
+            <p>باحث في آثار اليمن ونقوش المسند</p>
+            <span class="badge">10 مؤلفات</span>
+        </a>
+
+        <a href="eriani.html" class="card">
+            <div class="icon"><i class="fas fa-user-graduate"></i></div>
+            <h3>مطهر بن علي الإرياني</h3>
+            <p>مؤرخ وشاعر وباحث</p>
+            <span class="badge">25+ مؤلفاً</span>
+        </a>
+
+        <a href="shaif.html" class="card">
+            <div class="icon"><i class="fas fa-user-graduate"></i></div>
+            <h3>عبد الحكيم شايف محمد</h3>
+            <p>أستاذ الآثار والأنثروبولوجيا</p>
+            <span class="badge">20 مؤلفاً</span>
+        </a>
+
+        <a href="dhafif.html" class="card">
+            <div class="icon"><i class="fas fa-user-graduate"></i></div>
+            <h3>عبدالله حسين العزي الذفيف</h3>
+            <p>مؤرخ متخصص في اليمن القديم</p>
+            <span class="badge">14 مؤلفاً</span>
+        </a>
+
+        <a href="amaamari.html" class="card">
+            <div class="icon"><i class="fas fa-user-graduate"></i></div>
+            <h3>عبد الرزاق أحمد المَعْمَري</h3>
+            <p>باحث في آثار ما قبل التاريخ</p>
+            <span class="badge">25+ مؤلفاً</span>
+        </a>
+
+        <a href="abataie.html" class="card">
+            <div class="icon"><i class="fas fa-user-graduate"></i></div>
+            <h3>أحمد بن أحمد باطايع</h3>
+            <p>عالم آثار يمني</p>
+            <span class="badge">30+ مؤلفاً</span>
+        </a>
+
+        <a href="falbared.html" class="card">
+            <div class="icon"><i class="fas fa-user-graduate"></i></div>
+            <h3>فيصل محمد إسماعيل البارد</h3>
+            <p>أستاذ الآثار والنقوش</p>
+            <span class="badge">25 مؤلفاً</span>
+        </a>
+
+        <a href="salahhusaini.html" class="card">
+            <div class="icon"><i class="fas fa-user-graduate"></i></div>
+            <h3>صلاح سلطان عبده الحسيني</h3>
+            <p>دكتوراه في آثار ما قبل الإسلام</p>
+            <span class="badge">40+ مؤلفاً</span>
+        </a>
+
+    </div>
+
+    <footer>
+        <div class="sponsor">
+            <i class="fas fa-crown"></i>
+            الصفحة برعاية وتصميم الدكتور صلاح الحسيني
+            <i class="fas fa-crown"></i>
+            2026
+        </div>
+        <p class="copy">
+            <i class="fas fa-database"></i> أرشفة علمية لمؤلفات رواد الآثار اليمنية
+        </p>
+    </footer>
+
+</div>
+</body>
+</html>

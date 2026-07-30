@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مؤلفات البروفسورة عميدة شعلان</title>
+    <!-- خطوط عربية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+        /* ===== المتغيرات ===== */
+        :root {
+            --primary-color: #0b2545;
+            --secondary-color: #134074;
+            --accent-color: #c5a880;
+            --accent-hover: #b39366;
+            --bg-light: #fdfbf7;
+            --text-dark: #1f2421;
+            --text-muted: #6c757d;
+            --card-bg: #ffffff;
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+            --shadow-hover: 0 8px 28px rgba(0, 0, 0, 0.10);
+            --radius: 10px;
+        }
+
+        /* ===== إعادة ضبط ===== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        h1,
+        h2,
+        h3,
+        .profile-title {
+            font-family: 'Amiri', serif;
+        }
+
+        /* ===== الهيدر ===== */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0.05;
+            background-image: url('https://www.transparenttextures.com/patterns/sandpaper.png');
+            pointer-events: none;
+        }
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-badge {
+            background-color: rgba(255, 255, 255, 0.10);
+            display: inline-block;
+            padding: 5px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            letter-spacing: 0.3px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 25px;
+            font-weight: 300;
+            opacity: 0.92;
+        }
+
+        .profile-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-profile {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid var(--accent-color);
+            padding: 8px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        .btn-profile:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* ===== المحتوى الرئيسي ===== */
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2.1rem;
+            color: var(--primary-color);
+            margin-bottom: 35px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* ===== بطاقات المؤلفات ===== */
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 60px;
+        }
+
+        .pub-card {
+            background: var(--card-bg);
+            border-right: 5px solid var(--accent-color);
+            border-radius: 4px;
+            padding: 22px 25px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .pub-card:hover {
+            transform: scale(1.005);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .pub-info {
+            flex: 1;
+        }
+
+        .pub-meta {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .pub-year {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 2px 14px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .pub-author {
+            color: var(--secondary-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            background-color: #eef4f8;
+            padding: 2px 12px;
+            border-radius: 4px;
+        }
+
+        .pub-title {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .pub-journal {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-pub-link {
+            background-color: #1877f2;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+            align-self: center;
+            flex-shrink: 0;
+        }
+        .btn-pub-link:hover {
+            background-color: #145dbf;
+        }
+
+        /* ===== شبكة الفيديو مع الصور المصغرة ===== */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
+            margin-bottom: 60px;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border-top: 3px solid var(--secondary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .video-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* حاوية الصورة المصغرة */
+        .video-thumbnail-wrapper {
+            position: relative;
+            background: #0b0b0b;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-thumbnail-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .video-card:hover .video-thumbnail-wrapper img {
+            transform: scale(1.03);
+        }
+
+        /* تراكب أيقونة التشغيل */
+        .play-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.20);
+            transition: background 0.3s ease;
+            pointer-events: none;
+        }
+        .video-thumbnail-wrapper:hover .play-overlay {
+            background: rgba(0, 0, 0, 0.35);
+        }
+        .play-overlay i {
+            font-size: 4.2rem;
+            color: rgba(255, 255, 255, 0.85);
+            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+            transition: transform 0.25s ease, color 0.25s ease;
+            pointer-events: none;
+        }
+        .video-thumbnail-wrapper:hover .play-overlay i {
+            transform: scale(1.10);
+            color: #fff;
+        }
+
+        /* الرابط الذي يغطي الصورة بالكامل (لجعلها قابلة للنقر) */
+        .video-thumbnail-link {
+            display: block;
+            position: relative;
+            text-decoration: none;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+        }
+        .video-thumbnail-link img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .video-card:hover .video-thumbnail-link img {
+            transform: scale(1.03);
+        }
+
+        /* جسم البطاقة (العنوان) */
+        .video-body {
+            padding: 18px 20px 12px 20px;
+            flex: 1;
+        }
+        .video-body h3 {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-weight: 700;
+        }
+
+        /* زر المشاهدة */
+        .btn-video {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #ff0000;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 16px;
+            margin: 4px 16px 18px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease, transform 0.15s ease;
+            border: none;
+        }
+        .btn-video:hover {
+            background-color: #cc0000;
+            transform: scale(1.01);
+        }
+        .btn-video i {
+            font-size: 1.1rem;
+        }
+
+        /* ===== التذييل ===== */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 4px solid var(--accent-color);
+        }
+        .footer-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .footer-sponsor {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .footer-group-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .footer-group-box h4 {
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .btn-facebook {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #1877f2;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 28px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn-facebook:hover {
+            background-color: #145dbf;
+        }
+        .footer-desc {
+            font-size: 0.9rem;
+            color: #b3c5d7;
+            max-width: 700px;
+            margin: 15px auto 0;
+            line-height: 1.7;
+        }
+
+        /* ===== استجابة ===== */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1.05rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .pub-card {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 18px;
+            }
+            .btn-pub-link {
+                text-align: center;
+                justify-content: center;
+                align-self: stretch;
+            }
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+            .play-overlay i {
+                font-size: 3.2rem;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== الهيدر ===== -->
+    <header>
+        <div class="header-container">
+            <span class="profile-badge">المؤلفات الأكاديمية الكاملة</span>
+            <h1>البروفسورة عميدة شعلان</h1>
+            <p class="subtitle">أستاذ آثار وحضارة اليمن القديم – جامعة صنعاء</p>
+
+            <div class="profile-links">
+                <a href="https://ar.wikipedia.org/wiki/%D8%B9%D9%85%D9%8A%D8%AF%D8%A9_%D8%B4%D8%B9%D9%84%D8%A7%D9%86" target="_blank" class="btn-profile">
+                    <i class="fab fa-wikipedia-w"></i> ويكيبيديا
+                </a>
+                <a href="https://www.academia.edu/23669101/Prof_Amida_Sholan" target="_blank" class="btn-profile">
+                    <i class="fas fa-graduation-cap"></i> Academia.edu
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== المحتوى الرئيسي ===== -->
+    <main>
+
+        <!-- ===== قائمة المؤلفات ===== -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-book-open"></i> قائمة المؤلفات والأبحاث العلمية</h2>
+
+            <div class="publications-list">
+
+                <!-- 2026 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2026</span>
+                        </div>
+                        <h3 class="pub-title">شواهد جنائزية معينية غير منشورة من وادي الجوف: دراسة أثرية مقارنة</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة كلية الآداب جامعة عدن – العدد 26، مج 2، ص 477–509</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/28033266876309699/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2026 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2026</span>
+                        </div>
+                        <h3 class="pub-title">عرض علمي وترجمة موجزة لكتاب اللوائح المنظمة لتجار صرواح ومحاجر الألباستر في المخدرة (اليمن)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة دراسات في تاريخ الجزيرةالعربية وحضارتها، المجلد 3، العدد 2 : 199–213. الرياض: جامعة الملك سعود</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/28046360165000370/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2026 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2026</span>
+                        </div>
+                        <h3 class="pub-title">دور المرأة ومكانتها في اليمن القديم في ضوء الوثائق المسندية</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> الندوة اليمنية: من التاريخ إلى المستقبل، مركز المستقبل اليمني للدراسات الاستراتيجية، ص 38–50</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/28033234162979637/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2025 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2025</span>
+                        </div>
+                        <h3 class="pub-title">"نعي للبروفيسور والتر و. مولر، بعنوان: "رحيل عالِم زبر حِمْيَر القديمة ومساندها الدهرية"</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> في Jemen Report، المجلد 56: العدد 1/2: الصفحات 17–19، بالألمانية</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+                <!-- 2025 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2025</span>
+                        </div>
+                        <h3 class="pub-title">"النساء والموسيقى في اليمن القديم في ضوء المعطيات الأثرية والنصوص الكتابية"</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> في: مسارات في تاريخ اليمن وحضارته، تأليف: نخبة من مؤرخات اليمن ومؤرخيه، تقديم وإشراف: أحمد السري، عناوين بوكس، القاهرة: ص 205–234</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/28046414534994933/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+
+                <!-- 2024 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2024</span>
+                        </div>
+                        <h3 class="pub-title">ثلاث قطع أثرية جديدة نادرة ممهورة بنقوش مسندية في المتحف الوطني للفن الآسيوي: دراسة أثرية ولغوية</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة أدوماتو، العدد 50، ص 75–88</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/28046456908324029/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2024 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2024</span>
+                        </div>
+                        <h3 class="pub-title">عرض لكتاب "المحكية السقطرية: دراسة في نظامها الصوتي والصرفي والنحوي" للدكتور/ نوح عبدالله سالم علمهي (السقطري)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة دراسات في تاريخ الجزيرة العربية وحضارتها، (1) 2، ص 115–119</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/7980371075359242/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2024 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2024</span>
+                        </div>
+                        <h3 class="pub-title">عرض كتاب: الجملة بين العربية والسقطرية: دراسة نحوية، للباحث/ أحمد عيسى أحمد الرميلي</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة دراسات في تاريخ الجزيرة العربية وحضارتها، جامعة الملك سعود، المجلد الثاني العدد الأول 2024</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/8974876112575395/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2023 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2023</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: محمد عطبوش</span>
+                        </div>
+                        <h3 class="pub-title">عرض: الملتقى السبئي الخامس والعشرون. اكتشاف الماضي: آثار وتاريخ جنوبي الجزيرة العربية وجيرانها المنعقد في 17–19 سبتمبر (أيلول) 2023</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> أدوماتو (48)، مركز عبدالرحمن السديري الثقافي، ص 47–52</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/7980335322029484/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2021 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2021</span>
+                        </div>
+                        <h3 class="pub-title">نعي للبروفيسور يوسف عبدالله، بعنوان "رحيل العَلّامة الآثاريّ وقارئ النُقوش اليَماني الأستاذ الدكتور يُوسُف مُحَمَّد عَبدُ اللهّ</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> في كتابه التذكاري: العلامة اليماني قارئ زُبر حمير ومساندها الدهرية الأستاذ الدكتور يوسف محمد عبدالله في يوم تأبينه: ص 63-67</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2015 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2015</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: Iwona Gajda</span>
+                        </div>
+                        <h3 class="pub-title">A new Ḥimyaritic inscription from Šibām Kawkabān dated to the year 487 of The Ḥimyaritic era (نقش حميري جديد من شبام كوكبان مؤرخ لسنة 487 من التقويم الحميري)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> ABADI 14، 161–169</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/991896234206796/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2014 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2014</span>
+                        </div>
+                        <h3 class="pub-title">"Eine neue sabäische Inschrift aus dem Museum der Universitä Sana̔ā̕" (نقش سبئي جديد من متحف قسم الآثار – بالألمانية)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> A Pioneer of Arabia. Studies in Honor of Moawiyah Ibrahim. Rome, p. 331–337</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/948107521919001/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2013 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2013</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: Barbara Jändl</span>
+                        </div>
+                        <h3 class="pub-title">A Minaean inscription on a bronze vessel addressed to Waddum (نقش معيني على إناء من البرونز موجه إلى ودم)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> Entre Carthage et l’Arabie heureuse Mélanges offerts à François Bron. De Boccard, Paris</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/613562468706843/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2013 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2013</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: إبراهيم صدقة</span>
+                        </div>
+                        <h3 class="pub-title">عائلة "ح د ث م" في ذكرها الأول في نقش سبئي</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> المجلة الأردنية للتأريخ والآثار، المجلد 7، (العددان 2، 3)، ص 99–118</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/689922024404220/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2013 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2013</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: Mohammed Maraqten </span>
+                        </div>
+                        <h3 class="pub-title">An inscribed golden amulet of the goddess ʿUzzayān (تميمة ذهبية منقوشة للإلهة عزيان)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> Raydan 8, 111- 114</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/546018072127950/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+
+                <!-- 2008 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2008</span>
+                        </div>
+                        <h3 class="pub-title">نقتعقيب على الورقة المعنونة بـ 'القرابين … قراءة في ثقافة سلطة الآلهة'.</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> في: صورة الحاكم في التراث الشعبي، صنعاء: إصدارات بيت الموروث الشعبي 5، ص 131–138.</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+
+                <!-- 2007 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2007</span>
+                        </div>
+                        <h3 class="pub-title">نقشان سبئيان جديدان من نقوش شواهد القبور</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة جامعة صنعاء للعلوم الاجتماعية والإنسانية، العدد 2، ص 277–287</p>
+                    </div>
+                    <a href="https://www.academia.edu/114215185/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2006 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2006</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: غسان طه ياسين</span>
+                        </div>
+                        <h3 class="pub-title">"دمى حيوانية غير منشورة من متحف قسم الآثار بجامعة صنعاء/اليمن"</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> أدوماتو، العدد الرابع عشر، رجب 1427هـ – ص 27–46</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/508130385916719/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2006 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2006</span>
+                        </div>
+                        <h3 class="pub-title">دراسة تحليلية لنقش معيني جديد</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة ابجديات – حولية سنوية محكمة تصدر عن مركز الخطوط مكتبة الاسكندرية، العدد الأول</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/1358831924179890/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2006 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2006</span>
+                        </div>
+                        <h3 class="pub-title">عرض علمي لكتاب صنعاء الحضارة والتاريخ</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الثوابت: 179-182</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/1358831924179890/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2005 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2005</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> إشراف وتحرير مشترك مع: سابينا أنطونيني، منير عربش</span>
+                        </div>
+                        <h3 class="pub-title">دراسات سبئية: دراسات في الآثار والنقوش والتاريخ مهداه إلى يوسف محمد عبدالله (مجموعة مؤلفين)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> صنعاء – نابولي</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/3140392236023841/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+
+                <!-- 2005 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2005</span>
+                        </div>
+                        <h3 class="pub-title">دراسة تحليلية لنقش سبئي جديد من المتحف الوطني بصنعاء</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> دراسات سبئية، دراسات في الآثار والنقوش والتاريخ مهداة إلى يوسف محمد عبد الله، اليساندرو دي ميجريه، وكرستيان روبان بمناسبة بلوغهم الستين عاماً، صنعاء – نابولي، ص 51–63</p>
+                    </div>
+                    <a href="https://www.academia.edu/114214846/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2005 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2005</span>
+                        </div>
+                        <h3 class="pub-title">دراسة تحليلية لنقش سبئي جديد على مبخرة</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> وقائع ملتقى اليرموك الثاني لدراسة النقوش والكتابات، ص 21–34</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/5084942408235471/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2005 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2005</span>
+                        </div>
+                        <h3 class="pub-title">عرض للمؤتمر الدولي الخامس للحضارة اليمنية / صنعاء</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> أدوماتو، العدد 11، مؤسسة عبد الرحمن السديري الخيرية، الرياض</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/27697721369864253/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2005 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2005</span>
+                        </div>
+                        <h3 class="pub-title">دراسة تحليلية لنقش سبئي جديد من ثعيلة</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة جامعة الملك سعود، م 17، الآداب 2، ص 429–439</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/28033464856289901/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2005 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2005</span>
+                        </div>
+                        <h3 class="pub-title">نقوش سبئية جديدة دراسة تحليلية في دلالاتها اللغوية والتاريخية</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> العصور، مج 15، ج 2، دار المريخ – لندن، ص 7–23</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+
+                <!-- 2005 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2005</span>
+                        </div>
+                        <h3 class="pub-title">تعقيب على ورقة علمية في ندوة رداء الدولة، صنعاء-اليمن "أزياء القادة السياسيين"</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> كتاب رداء الدولة دلالات الزي السياسي اليمني من 1948 إلى 2004م، صنعاء</p>
+                    </div>
+                    <a href="https://www.academia.edu/114214846/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+
+                <!-- 2004 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2004</span>
+                        </div>
+                        <h3 class="pub-title">عرض ندوة نقوش وآثار جنوب الجزيرة العربية</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> أدوماتو، ع 9، ص 83–84</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/27697721369864253/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2004 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2004</span>
+                        </div>
+                        <h3 class="pub-title">عرض لملتقى اليرموك الثاني لدراسة النقوش والكتابات القديمة</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> أدوماتو، ع 9، مؤسسة عبد الرحمن السديري الخيرية، الرياض، ص 92–94</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/27697721369864253/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2004 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2004</span>
+                        </div>
+                        <h3 class="pub-title">عرض لمجلة المسند "العدد الأول"</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة المسند ع 2، الهيئة العامة للآثار والمتاحف، صنعاء، ص 73–76</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/475064815889943/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2004 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2004</span>
+                        </div>
+                        <h3 class="pub-title">الدور الاجتماعي للمرأة في اليمن القديم</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الإكليل، العدد 28، وزارة الثقافة والسياحة، صنعاء، ص 126–129</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/889405661122521/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2003 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2003</span>
+                        </div>
+                        <h3 class="pub-title">نقش سبئي جديد من جدران: دراسة تحليلية في دلالاته اللغوية</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> أدوماتو، العدد 7، مؤسسة عبد الرحمن السديري الخيرية، الرياض، ص 65–74</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/28033379976298389/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2002 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2002</span>
+                        </div>
+                        <h3 class="pub-title">نقوش جديدة من متحف قسم الآثار – دراسة تحليلية لغوية لثلاثة نقوش قصيرة</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الإكليل، ع 26، ص 155–157، وزارة الثقافة، صنعاء</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/28046566918313028/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2002 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2002</span>
+                        </div>
+                        <h3 class="pub-title">نقش جديد من نقوش ذي سماوي</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> أدوماتو، ع 6، مؤسسة عبد الرحمن السديري الخيرية، الرياض، ص 7–14</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/556419517754472/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 1999 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1999</span>
+                        </div>
+                        <h3 class="pub-title">Frauennamen in den altsüdarabischen Inschriften (أسماء النساء في النقوش العربية الجنوبية – رسالة الدكتوراه)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> Texte und Studien zur Orientalistik 11 (Hildesheim: Olms)</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/500640753332349/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 1996 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1996</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: Yaseen G.T, El-Gamili M.M.</span>
+                        </div>
+                        <h3 class="pub-title">Unpublished terracotta figurines in the Museum of the Archaeology Department, Sana'a University, Yemen (دمى طينية غير منشورة في متحف قسم الآثار، جامعة صنعاء، اليمن)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> Arabian Archaeology and Epigraphy, vol. 7, n° 2, pp. 287–303</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/508131735916584/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 1992 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1992</span>
+                        </div>
+                        <h3 class="pub-title">عادات الدفن في حضرموت – دراسة اثنوأثرية (رسالة ماجستير)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> معهد الآثار والانثربولوجيا، جامعة اليرموك – إربد</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/682979975098425/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+                    <a 
+
+                <!-- 1991 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1991</span>
+                        </div>
+                        <h3 class="pub-title">النشاطات الأثرية في اليمن</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة أنباء (تصدر من معهد الآثار والأثروبولوجيا-جامعة اليرموك) العدد 11: 15-16.</p>
+                    </div>
+                    <a href="https://archaeology.yu.edu.jo/index.php/ar/more/2022-09-05-22-21-23/museum-about" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+            </div>
+        <section>
+            <h2 class="section-title"><i class="fas fa-book-open"></i> مقالات وحوارات: ثقافية، وإجتماعية، وسياسية </h2>
+
+            <div class="publications-list">
+<div class="pub-card">
+    <div class="pub-info">
+        <div class="pub-meta">
+            <span class="pub-year">2015</span>
+            <span class="pub-author"><i class="fas fa-user"></i> عميدة شعلان</span>
+        </div>
+        <h3 class="pub-title">حوار مع الفنانة التشكيلية وفيلسوفة علم الجمال آمنة النَصيري: سنوات نضال تنتظر المجتمعات العربية لتلوح بوادر تغيير حقيقية</h3>
+        <p class="pub-journal"><i class="fas fa-globe"></i> موقع قنطرة، بون. 20.12.2015</p>
+    </div>
+    <a href="https://qantara.de/ar/article/%D8%AD%D9%88%D8%A7%D8%B1-%D9%85%D8%B9-%D8%A7%D9%84%D9%81%D9%86%D8%A7%D9%86%D8%A9-%D8%A7%D9%84%D8%AA%D8%B4%D9%83%D9%8A%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D9%8A%D9%85%D9%86%D9%8A%D8%A9-%D9%88%D9%81%D9%8A%D9%84%D8%B3%D9%88%D9%81%D8%A9-%D8%B9%D9%84%D9%85-%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D9%84-%D8%A2%D9%85%D9%86%D8%A9-%D8%A7%D9%84%D9%86%D9%8E%D8%B5%D9%8A%D8%B1%D9%8A-%D8%B3%D9%86%D9%88%D8%A7%D8%AA-%D9%86%D8%B6%D8%A7%D9%84-%D8%AA%D9%86%D8%AA%D8%B8%D8%B1" target="_blank" class="btn-pub-link"><i class="fas fa-external-link-alt"></i> عرض الرابط</a>
+</div>
+
+<!-- 2015 - حوار مع علي المقري (05.11.2015) -->
+<div class="pub-card">
+    <div class="pub-info">
+        <div class="pub-meta">
+            <span class="pub-year">2015</span>
+            <span class="pub-author"><i class="fas fa-user"></i> عميدة شعلان</span>
+        </div>
+        <h3 class="pub-title">حوار مع الأديب والروائي اليمني علي المُقري: رواية حُرْمَة..."من الجنس جاءت الحياة كلها"</h3>
+        <p class="pub-journal"><i class="fas fa-globe"></i> موقع قنطرة، بون. 05.11.2015</p>
+    </div>
+    <a href="https://qantara.de/ar/article/%D8%AD%D9%88%D8%A7%D8%B1-%D9%85%D8%B9-%D8%A7%D9%84%D8%A3%D8%AF%D9%8A%D8%A8-%D9%88%D8%A7%D9%84%D8%B1%D9%88%D8%A7%D8%A6%D9%8A-%D8%A7%D9%84%D9%8A%D9%85%D9%86%D9%8A-%D8%B9%D9%84%D9%8A-%D8%A7%D9%84%D9%85%D9%8F%D9%82%D8%B1%D9%8A-%D8%B1%D9%88%D8%A7%D9%8A%D8%A9-%D8%AD%D9%8F%D8%B1%D9%92%D9%85%D9%8E%D8%A9%D9%85%D9%86-%D8%A7%D9%84%D8%AC%D9%86%D8%B3-%D8%AC%D8%A7%D8%A1%D8%AA-%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9-%D9%83%D9%84%D9%87%D8%A7" target="_blank" class="btn-pub-link"><i class="fas fa-external-link-alt"></i> عرض الرابط</a>
+</div>
+
+<!-- 2015 - وحدة اليمن (02.10.2015) -->
+<div class="pub-card">
+    <div class="pub-info">
+        <div class="pub-meta">
+            <span class="pub-year">2015</span>
+            <span class="pub-author"><i class="fas fa-user"></i> عميدة شعلان</span>
+        </div>
+        <h3 class="pub-title">بعد اجتياح صالح للجنوب مرة ثانية: وحدة اليمن - أما زالت ممكنة؟</h3>
+        <p class="pub-journal"><i class="fas fa-globe"></i> موقع قنطرة، بون. 02.10.2015</p>
+    </div>
+    <a href="https://qantara.de/ar/article/%D8%A8%D8%B9%D8%AF-%D8%A7%D8%AC%D8%AA%D9%8A%D8%A7%D8%AD-%D8%B5%D8%A7%D9%84%D8%AD-%D9%84%D9%84%D8%AC%D9%86%D9%88%D8%A8-%D9%85%D8%B1%D8%A9-%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D9%88%D8%AD%D8%AF%D8%A9-%D8%A7%D9%84%D9%8A%D9%85%D9%86-%D8%A3%D9%85%D8%A7-%D8%B2%D8%A7%D9%84%D8%AA-%D9%85%D9%85%D9%83%D9%86%D8%A9%D8%9F-%D8%A7%D9%84%D9%87%D8%AC%D9%88%D9%85-%D8%A7%D9%84%D8%AD%D9%88%D8%AB%D9%8A-%D8%B9%D9%84%D9%89-%D8%B9%D8%AF%D9%86%D8%A7%D9%84%D9%82%D8%B4%D8%A9" target="_blank" class="btn-pub-link"><i class="fas fa-external-link-alt"></i> عرض الرابط</a>
+</div>
+
+<!-- 2015 - آثار الحرب والشحن الطائفي (16.09.2015) -->
+<div class="pub-card">
+    <div class="pub-info">
+        <div class="pub-meta">
+            <span class="pub-year">2015</span>
+            <span class="pub-author"><i class="fas fa-user"></i> عميدة شعلان</span>
+        </div>
+        <h3 class="pub-title">آثار الحرب والشحن الطائفي على النسيج الاجتماعي والتعايش المذهبي في اليمن: الحرب بين التمرد وشرعية الصراع والتأثير الطائفي</h3>
+        <p class="pub-journal"><i class="fas fa-globe"></i> موقع قنطرة، بون. 16.09.2015</p>
+    </div>
+    <a href="https://qantara.de/ar/article/%D8%A2%D8%AB%D8%A7%D8%B1-%D8%A7%D9%84%D8%AD%D8%B1%D8%A8-%D9%88%D8%A7%D9%84%D8%B4%D8%AD%D9%86-%D8%A7%D9%84%D8%B7%D8%A7%D8%A6%D9%81%D9%8A-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D9%86%D8%B3%D9%8A%D8%AC-%D8%A7%D9%84%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%D9%8A-%D9%88%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%8A%D8%B4-%D8%A7%D9%84%D9%85%D8%B0%D9%87%D8%A8%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D9%8A%D9%85%D9%86-%D8%AD%D8%B1%D8%A8-%D8%A8%D9%8A%D9%86-%D8%AA%D9%85%D8%B1%D8%AF" target="_blank" class="btn-pub-link"><i class="fas fa-external-link-alt"></i> عرض الرابط</a>
+</div>
+
+<!-- 2015 - الإرث الحضاري الإنساني في اليمن (07.06.2015) -->
+<div class="pub-card">
+    <div class="pub-info">
+        <div class="pub-meta">
+            <span class="pub-year">2015</span>
+            <span class="pub-author"><i class="fas fa-user"></i> عميدة شعلان</span>
+        </div>
+        <h3 class="pub-title">الإرث الحضاري الإنساني في اليمن: المعالم الأثرية اليمنية...ضحية الحروب والإهمال وعبث الإنسان</h3>
+        <p class="pub-journal"><i class="fas fa-globe"></i> موقع قنطرة، بون. 07.06.2015</p>
+    </div>
+    <a href="https://qantara.de/ar/article/%D8%A7%D9%84%D8%A5%D8%B1%D8%AB-%D8%A7%D9%84%D8%AD%D8%B6%D8%A7%D8%B1%D9%8A-%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D9%8A%D9%85%D9%86-%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%84%D9%85-%D8%A7%D9%84%D8%A3%D8%AB%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D9%8A%D9%85%D9%86%D9%8A%D8%A9%D8%B6%D8%AD%D9%8A%D8%A9-%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D8%A5%D9%87%D9%85%D8%A7%D9%84-%D9%88%D8%B9%D8%A8%D8%AB-%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86" target="_blank" class="btn-pub-link"><i class="fas fa-external-link-alt"></i> عرض الرابط</a>
+</div>
+
+        </section>
+
+        <!-- ===== محاضرات يوتيوب مع صور مصغرة حقيقية ===== -->
+        <section>
+            <h2 class="section-title"><i class="fab fa-youtube"></i> محاضرات ولقاءات مرئية على يوتيوب</h2>
+
+            <div class="video-grid">
+
+                <!-- 1 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=P6txO5VN-E8" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/P6txO5VN-E8/hqdefault.jpg" alt="الدكتورة عميدة شعلان - إرث حفيدة ملكة سبأ" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>الدكتورة عميدة شعلان – إرث حفيدة ملكة سبأ</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=P6txO5VN-E8" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 2 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=50zIzEb8bSc" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/50zIzEb8bSc/hqdefault.jpg" alt="مومياء يمنية في مصر تصدم الباحثين" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>مومياء يمنية في مصر تصدم الباحثين.. وآثار يمنية تُهرب لأمريكا وإسرائيل بهذه الطريقة | اليمن بودكاست</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=50zIzEb8bSc" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 3 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=Ase0CWY7Euw" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/Ase0CWY7Euw/hqdefault.jpg" alt="ماذا تخبرنا الكتابات العربية القديمة عن تاريخ اليمن القديم؟" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>ماذا تخبرنا الكتابات العربية القديمة عن تاريخ اليمن القديم؟ | د. عميدة شعلان</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=Ase0CWY7Euw" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 4 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=AT2zypuz0kw" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/AT2zypuz0kw/hqdefault.jpg" alt="مرافئ مع د عميدة شعلان" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>مرافئ | مع د عميدة شعلان – أستاذة الآثار والكتابات العربية القديمة</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=AT2zypuz0kw" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 5 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=ywPIVAiWrB8" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/ywPIVAiWrB8/hqdefault.jpg" alt="المشهد الثقافي في اليمن القديم" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>محاضرة: المشهد الثقافي في اليمن القديم – أ.د عميدة شعلان</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=ywPIVAiWrB8" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 6 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=--95TsFYgdM" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/--95TsFYgdM/hqdefault.jpg" alt="الموسيقى والغناء عند أهل اليمن قبل الإسلام" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>الموسيقى والغناء عند أهل اليمن قبل الإسلام</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=--95TsFYgdM" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 7 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=dWYhSXiZUts" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/dWYhSXiZUts/hqdefault.jpg" alt="منتدى شومان - اليمن وفلسطين والأردن" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>منتدى شومان – اليمن وفلسطين والأردن.. علاقات ممتدة عبر التاريخ في ضوء النقوش اليمنية القديمة</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=dWYhSXiZUts" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 8 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=8qX-Sf6gPiA" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/8qX-Sf6gPiA/hqdefault.jpg" alt="المتاحف اليمنية بين النهب والإهمال" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>المتاحف اليمنية بين النهب والإهمال: لقاء مع أستاذة الآثار د. عميدة شعلان</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=8qX-Sf6gPiA" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 9 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=qLY-vQpZRWs" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/qLY-vQpZRWs/hqdefault.jpg" alt="حضارة اليمن القديمة تميزت بالفنون الراقية" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>حضارة اليمن القديمة تميزت بالفنون الراقية كالموسيقى والطرب</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=qLY-vQpZRWs" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 10 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=Vy9iHI5fQlo" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/Vy9iHI5fQlo/hqdefault.jpg" alt="المشهد الثقافي للمرأة في الحضارة اليمنية" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>محاضرة ندوة "المشهد الثقافي للمرأة في الحضارة اليمنية"</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=Vy9iHI5fQlo" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 11 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=SSgV1kfxyZ0" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/SSgV1kfxyZ0/hqdefault.jpg" alt="تابوت التاجر اليمني زيد إل" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>محاضرة عن تابوت التاجر اليمني زيد إل – المتحف المصري</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=SSgV1kfxyZ0" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== التذييل ===== -->
+    <footer>
+        <div class="footer-container">
+            <p class="footer-sponsor">الصفحة برعاية وتصميم الدكتور صلاح الحسيني 2026 ©</p>
+
+            <div class="footer-group-box">
+                <h4>تابعونا على الفيسبوك</h4>
+                <p>في مجموعة: <strong>كتب تاريخ وآثار الجزيرة العربية</strong></p>
+                <a href="https://www.facebook.com/groups/arabia.books" target="_blank" class="btn-facebook">
+                    <i class="fab fa-facebook"></i> الانضمام للمجموعة
+                </a>
+            </div>
+
+            <p class="footer-desc">
+                مكتبة رقمية متخصصة في تاريخ وآثار وتراث شبه الجزيرة العربية واليمن القديم.
+                تضم أعمالاً أكاديمية وبحثية ما بين رسائل جامعية وأبحاث محكمة في كبرى المجلات العلمية.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
