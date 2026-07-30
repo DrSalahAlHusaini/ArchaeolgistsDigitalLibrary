@@ -4,644 +4,560 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>مؤلفات الدكتور خلدون هزاع عبده نعمان</title>
-    <!-- خطوط أنيقة من Google Fonts -->
+    <!-- خطوط عربية أنيقة -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
-    <!-- Font Awesome للأيقونات -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
     <style>
+        /* ===== المتغيرات ===== */
+        :root {
+            --primary-color: #4a2c1a;
+            --secondary-color: #6b3f28;
+            --accent-color: #c9a87c;
+            --accent-hover: #b0885a;
+            --bg-light: #fdfbf7;
+            --text-dark: #1f2421;
+            --text-muted: #6c757d;
+            --card-bg: #ffffff;
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+            --shadow-hover: 0 8px 28px rgba(0, 0, 0, 0.10);
+            --radius: 10px;
+        }
+
+        /* ===== إعادة ضبط ===== */
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         body {
-            background: #f7f3ee;
-            background-image: radial-gradient(circle at 10% 20%, rgba(200, 170, 140, 0.05) 0%, transparent 50%);
-            font-family: 'Cairo', 'Amiri', serif;
-            color: #2c2c2c;
-            padding: 2rem 1rem;
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             line-height: 1.8;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(255, 252, 248, 0.85);
-            backdrop-filter: blur(2px);
-            border-radius: 48px 48px 32px 32px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            padding: 2.5rem 2rem;
-            border: 1px solid rgba(200, 170, 140, 0.2);
+        h1,
+        h2,
+        h3,
+        .profile-title {
+            font-family: 'Amiri', serif;
         }
 
-        /* الهيدر */
-        .header {
+        /* ===== الهيدر ===== */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            padding: 50px 20px;
             text-align: center;
-            border-bottom: 2px solid #dac5b0;
-            padding-bottom: 2rem;
-            margin-bottom: 2.5rem;
+            border-bottom: 5px solid var(--accent-color);
             position: relative;
+            overflow: hidden;
         }
-
-        .header::after {
-            content: "✧";
+        header::before {
+            content: "";
             position: absolute;
-            bottom: -18px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #f7f3ee;
-            padding: 0 16px;
-            font-size: 1.8rem;
-            color: #a67b5b;
+            inset: 0;
+            opacity: 0.05;
+            background-image: url('https://www.transparenttextures.com/patterns/sandpaper.png');
+            pointer-events: none;
         }
 
-        .header h1 {
-            font-family: 'Amiri', serif;
-            font-weight: 700;
-            font-size: 2.8rem;
-            color: #3d2b1f;
-            letter-spacing: 1px;
-            margin-bottom: 0.25rem;
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
-        .header h1 i {
-            color: #a67b5b;
-            font-size: 2.4rem;
-            margin: 0 10px;
-        }
-
-        .header .subtitle {
-            font-size: 1.2rem;
-            color: #5f4a38;
-            font-weight: 300;
-            background: #ece3da;
+        .profile-badge {
+            background-color: rgba(255, 255, 255, 0.10);
             display: inline-block;
-            padding: 0.3rem 2rem;
-            border-radius: 40px;
-            letter-spacing: 0.5px;
-            margin-top: 8px;
-        }
-
-        .header .subtitle i {
-            margin-left: 8px;
-            color: #a67b5b;
-        }
-
-        /* روابط السيرة الذاتية */
-        .profile-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem 1.8rem;
-            margin: 1.8rem 0 1rem;
-        }
-
-        .profile-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #fffcf8;
-            padding: 0.5rem 1.6rem;
-            border-radius: 60px;
-            text-decoration: none;
-            color: #3d2b1f;
-            font-weight: 600;
-            font-size: 1rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-            border: 1px solid #e6d7c8;
-            transition: all 0.2s ease;
-        }
-
-        .profile-links a i {
-            font-size: 1.2rem;
-            color: #a67b5b;
-        }
-
-        .profile-links a:hover {
-            background: #3d2b1f;
-            color: #f7f3ee;
-            border-color: #3d2b1f;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-links a:hover i {
-            color: #f7f3ee;
-        }
-
-        /* قسم المؤلفات */
-        .section-title {
-            font-family: 'Amiri', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #3d2b1f;
-            margin: 2.5rem 0 1.8rem;
-            padding-right: 1rem;
-            border-right: 6px solid #a67b5b;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .section-title i {
-            color: #a67b5b;
-            font-size: 1.8rem;
-        }
-
-        .publications-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-        }
-
-        .pub-item {
-            background: #fffcf8;
+            padding: 5px 18px;
             border-radius: 20px;
-            padding: 1.4rem 1.8rem;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
-            border: 1px solid #ede4db;
-            transition: all 0.25s ease;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: baseline;
-            gap: 0.4rem 0.8rem;
-        }
-
-        .pub-item:hover {
-            border-color: #cbb19b;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-            transform: translateY(-2px);
-            background: #fffefa;
-        }
-
-        .pub-index {
-            font-weight: 700;
-            color: #a67b5b;
-            font-size: 0.9rem;
-            min-width: 2.2rem;
-            opacity: 0.7;
-        }
-
-        .pub-title {
-            font-weight: 700;
-            font-size: 1.05rem;
-            color: #2c1f14;
-            flex: 1 1 100%;
-        }
-
-        .pub-title i {
-            color: #a67b5b;
-            margin-left: 6px;
-            font-size: 0.9rem;
-        }
-
-        .pub-meta {
-            font-size: 0.95rem;
-            color: #5f4a38;
-            background: #f1e9e1;
-            padding: 0.1rem 1rem;
-            border-radius: 30px;
-            display: inline-block;
-            margin: 0.2rem 0;
-        }
-
-        .pub-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem 1rem;
-            margin-top: 0.3rem;
-            width: 100%;
-        }
-
-        .pub-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
             font-size: 0.85rem;
-            color: #7a5f4a;
-            text-decoration: none;
-            background: #f1e9e1;
-            padding: 0.15rem 1rem;
-            border-radius: 30px;
-            transition: all 0.15s;
-            border: 1px solid transparent;
-        }
-
-        .pub-links a i {
-            font-size: 0.8rem;
-            color: #a67b5b;
-        }
-
-        .pub-links a:hover {
-            background: #3d2b1f;
-            color: #f7f3ee;
-            border-color: #3d2b1f;
-        }
-
-        .pub-links a:hover i {
-            color: #f7f3ee;
-        }
-
-        .pub-doi {
-            font-size: 0.8rem;
-            color: #8f7a67;
-            background: #ede4db;
-            padding: 0.1rem 0.8rem;
-            border-radius: 30px;
-            direction: ltr;
-            display: inline-block;
-        }
-
-        /* الفوتر */
-        .footer {
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 2px solid #dac5b0;
-            text-align: center;
-            color: #3d2b1f;
-        }
-
-        .footer .sponsor {
-            font-size: 1.1rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            margin-bottom: 1.2rem;
-        }
-
-        .footer .sponsor i {
-            color: #a67b5b;
-            margin: 0 6px;
-        }
-
-        .footer .social-group {
-            background: #f1e9e1;
-            padding: 1.2rem 1.8rem;
-            border-radius: 60px;
-            display: inline-block;
-            text-align: right;
-            max-width: 100%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-        }
-
-        .footer .social-group a {
-            color: #3d2b1f;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin: 0 6px;
-            transition: color 0.2s;
-        }
-
-        .footer .social-group a i {
-            color: #a67b5b;
-            font-size: 1.3rem;
-        }
-
-        .footer .social-group a:hover {
-            color: #a67b5b;
-        }
-
-        .footer .social-group .group-desc {
-            display: block;
-            font-weight: 300;
-            font-size: 0.9rem;
-            color: #5f4a38;
-            margin-top: 6px;
-            border-top: 1px dashed #dac5b0;
-            padding-top: 6px;
-        }
-
-        .footer .copyright {
-            margin-top: 1.8rem;
-            font-size: 0.9rem;
-            color: #7a5f4a;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.20);
             letter-spacing: 0.3px;
         }
 
-        .footer .copyright i {
-            color: #a67b5b;
-            margin: 0 4px;
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--accent-color);
         }
 
-        /* استجابة */
-        @media (max-width: 700px) {
-            .container {
-                padding: 1.5rem 1rem;
-                border-radius: 28px;
-            }
-            .header h1 {
+        .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 25px;
+            font-weight: 300;
+            opacity: 0.92;
+        }
+
+        .profile-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-profile {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid var(--accent-color);
+            padding: 8px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        .btn-profile:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* ===== المحتوى الرئيسي ===== */
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2.1rem;
+            color: var(--primary-color);
+            margin-bottom: 35px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* ===== بطاقات المؤلفات ===== */
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 60px;
+        }
+
+        .pub-card {
+            background: var(--card-bg);
+            border-right: 5px solid var(--accent-color);
+            border-radius: 4px;
+            padding: 22px 25px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .pub-card:hover {
+            transform: scale(1.005);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .pub-info {
+            flex: 1;
+        }
+
+        .pub-meta {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .pub-year {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 2px 14px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .pub-author {
+            color: var(--secondary-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            background-color: #f1ece7;
+            padding: 2px 12px;
+            border-radius: 4px;
+        }
+
+        .pub-title {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .pub-journal {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-pub-link {
+            background-color: #1877f2;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+            align-self: center;
+            flex-shrink: 0;
+        }
+        .btn-pub-link:hover {
+            background-color: #145dbf;
+        }
+
+        /* ===== التذييل ===== */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 4px solid var(--accent-color);
+        }
+        .footer-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .footer-sponsor {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .footer-group-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .footer-group-box h4 {
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .btn-facebook {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #1877f2;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 28px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn-facebook:hover {
+            background-color: #145dbf;
+        }
+        .footer-desc {
+            font-size: 0.9rem;
+            color: #b3c5d7;
+            max-width: 700px;
+            margin: 15px auto 0;
+            line-height: 1.7;
+        }
+
+        /* ===== استجابة ===== */
+        @media (max-width: 768px) {
+            header h1 {
                 font-size: 2rem;
             }
-            .header h1 i {
-                font-size: 1.8rem;
+            .subtitle {
+                font-size: 1.05rem;
             }
             .section-title {
                 font-size: 1.6rem;
             }
-            .pub-item {
-                padding: 1rem 1.2rem;
+            .pub-card {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 18px;
             }
-            .pub-title {
-                font-size: 0.95rem;
-            }
-            .profile-links a {
-                font-size: 0.85rem;
-                padding: 0.4rem 1.2rem;
-            }
-            .footer .social-group {
-                padding: 1rem;
+            .btn-pub-link {
+                text-align: center;
+                justify-content: center;
+                align-self: stretch;
             }
         }
 
-        @media (max-width: 480px) {
-            .header h1 {
-                font-size: 1.6rem;
-            }
-            .pub-meta {
-                font-size: 0.8rem;
-            }
-            .pub-links a {
-                font-size: 0.75rem;
-            }
-        }
-
-        /* تنسيق خاص للروابط الطويلة */
-        .pub-links a[href*="doi.org"] {
-            background: #e8ddd2;
-        }
-        .pub-links a[href*="facebook.com"] {
-            background: #e6dcd1;
-        }
-        .pub-links a[href*="academia.edu"] {
-            background: #e6dcd1;
-        }
-        .pub-links a[href*="halshs"] {
-            background: #e6dcd1;
+        @media (min-width: 769px) and (max-width: 1024px) {
+            /* أي تنسيقات إضافية للشاشات المتوسطة */
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+    <!-- ===== الهيدر ===== -->
+    <header>
+        <div class="header-container">
+            <span class="profile-badge">المؤلفات الأكاديمية الكاملة</span>
+            <h1>الدكتور خلدون هزاع عبده نعمان</h1>
+            <p class="subtitle">باحث وآثارى يمني – رحمه الله</p>
 
-    <!-- ========== الهيدر ========== -->
-    <header class="header">
-        <h1>
-            <i class="fas fa-scroll"></i>
-            مؤلفات الدكتور
-            <span style="color:#a67b5b;">خلدون هزاع عبده نعمان</span>
-            <i class="fas fa-feather-alt"></i>
-        </h1>
-        <div class="subtitle">
-            <i class="fas fa-book-open"></i>
-            رحمه الله · باحث وآثارى يمني
-        </div>
-
-        <!-- روابط السيرة -->
-        <div class="profile-links">
-            <a href="https://independent.academia.edu/NomanKhaldon" target="_blank" rel="noopener">
-                <i class="fab fa-academia"></i> Academia.edu
-            </a>
-            <a href="https://orcid.org/0000-0002-6673-6999" target="_blank" rel="noopener">
-                <i class="fab fa-orcid"></i> ORCID
-            </a>
-            <a href="https://ar.wikipedia.org/wiki/%D8%AE%D9%84%D8%AF%D9%88%D9%86_%D9%86%D8%B9%D9%85%D8%A7%D9%86" target="_blank" rel="noopener">
-                <i class="fab fa-wikipedia-w"></i> ويكيبيديا
-            </a>
+            <div class="profile-links">
+                <a href="https://independent.academia.edu/NomanKhaldon" target="_blank" class="btn-profile">
+                    <i class="fab fa-academia"></i> Academia.edu
+                </a>
+                <a href="https://orcid.org/0000-0002-6673-6999" target="_blank" class="btn-profile">
+                    <i class="fab fa-orcid"></i> ORCID
+                </a>
+                <a href="https://ar.wikipedia.org/wiki/%D8%AE%D9%84%D8%AF%D9%88%D9%86_%D9%86%D8%B9%D9%85%D8%A7%D9%86" target="_blank" class="btn-profile">
+                    <i class="fab fa-wikipedia-w"></i> ويكيبيديا
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- ========== قائمة المؤلفات ========== -->
-    <h2 class="section-title">
-        <i class="fas fa-list-ul"></i>
-        قائمة المؤلفات والأبحاث العلمية
-    </h2>
+    <!-- ===== المحتوى الرئيسي ===== -->
+    <main>
 
-    <div class="publications-grid">
-        <!-- 1 -->
-        <div class="pub-item">
-            <span class="pub-index">01</span>
-            <div class="pub-title">
-                <i class="fas fa-caret-left"></i>
-                خلدون نعمان، صلاح الكوماني: جنوب الجزيرة العربية وشمالها في نقوش حصن كُحْلان (اليمن)
-            </div>
-            <span class="pub-meta">مجلة اثيرت، العدد 1، 2025، ص 165- 192</span>
-            <div class="pub-links">
-                <a href="#" onclick="alert('الرابط غير متوفر حالياً')"><i class="fas fa-link"></i> رابط</a>
-            </div>
-        </div>
+        <!-- ===== قائمة المؤلفات ===== -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-book-open"></i> قائمة المؤلفات والأبحاث العلمية</h2>
 
-        <!-- 2 -->
-        <div class="pub-item">
-            <span class="pub-index">02</span>
-            <div class="pub-title">
-                <i class="fas fa-caret-left"></i>
-                أنفاق بينون ونقوشها دراسة آثارية - لغوية
-            </div>
-            <span class="pub-meta">مجلة حولية كلية الآداب/ جامعة عدن، العدد 23، ديسمبر 2024 ص 283 - 316</span>
-            <div class="pub-links">
-                <a href="https://web.facebook.com/groups/arabia.books/posts/9335873806475622/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
-            </div>
-        </div>
+            <div class="publications-list">
 
-        <!-- 3 -->
-        <div class="pub-item">
-            <span class="pub-index">03</span>
-            <div class="pub-title">
-                <i class="fas fa-caret-left"></i>
-                نقش اغتيال الملك وَتَار يُهَأمِن ملك سبأ وذي ريدان ونقوش أخرى: دراسة تحليلية
-            </div>
-            <span class="pub-meta">مجلة الآداب، جامعة ذمار، مجلد 12 عدد 3 (2024)، ص 172- 195</span>
-            <div class="pub-links">
-                <a href="https://doi.org/10.35696/arts.v12i3.2096" target="_blank" rel="noopener"><i class="ai ai-doi"></i> DOI</a>
-                <a href="https://web.facebook.com/groups/arabia.books/posts/8495043890558622/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
-            </div>
-        </div>
+                <!-- 2025 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2025</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: صلاح الكوماني</span>
+                        </div>
+                        <h3 class="pub-title">جنوب الجزيرة العربية وشمالها في نقوش حصن كُحْلان (اليمن)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة اثيرت، العدد 1، 2025، ص 165- 192</p>
+                    </div>
+                    <a href="#" onclick="alert('الرابط غير متوفر حالياً'); return false;" class="btn-pub-link"><i class="fas fa-link"></i> رابط</a>
+                </div>
 
-        <!-- 4 -->
-        <div class="pub-item">
-            <span class="pub-index">04</span>
-            <div class="pub-title">
-                <i class="fas fa-caret-left"></i>
-                نقوش من مناطق قبيلة مهأنف اليمنية: تحقيق ودراسة
-            </div>
-            <span class="pub-meta">مجلة كلية الآداب، جامعة ذمار، مجلد 12 عدد 2، 2024، ص 25- 90</span>
-            <div class="pub-links">
-                <a href="https://doi.org/10.35696/arts.v12i3.2096" target="_blank" rel="noopener"><i class="ai ai-doi"></i> DOI</a>
-            </div>
-        </div>
+                <!-- 2024 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2024</span>
+                        </div>
+                        <h3 class="pub-title">أنفاق بينون ونقوشها دراسة آثارية - لغوية</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة حولية كلية الآداب/ جامعة عدن، العدد 23، ديسمبر 2024 ص 283 - 316</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/9335873806475622/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
 
-        <!-- 5 -->
-        <div class="pub-item">
-            <span class="pub-index">05</span>
-            <div class="pub-title">
-                <i class="fas fa-caret-left"></i>
-                نقوش جديدة من مصنعة مارية NOUVELLES INSCRIPTIONS DE MASNA'AT MARIYIA
-            </div>
-            <span class="pub-meta">Arabie - Arabies: Volume Offert a Christian Julien Robin Par Ses Collegues, Ses Eleves Et Ses Amis 2023, 41 - 57</span>
-            <div class="pub-links">
-                <a href="https://web.facebook.com/groups/arabia.books/posts/9925982394131424/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
-            </div>
-        </div>
+                <!-- 2024 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2024</span>
+                        </div>
+                        <h3 class="pub-title">نقش اغتيال الملك وَتَار يُهَأمِن ملك سبأ وذي ريدان ونقوش أخرى: دراسة تحليلية</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الآداب، جامعة ذمار، مجلد 12 عدد 3 (2024)، ص 172- 195</p>
+                    </div>
+                    <a href="https://doi.org/10.35696/arts.v12i3.2096" target="_blank" class="btn-pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                </div>
 
-        <!-- 6 -->
-        <div class="pub-item">
-            <span class="pub-index">06</span>
-            <div class="pub-title">
-                <i class="fas fa-caret-left"></i>
-                Khaldūn H. Nuʿmān, Alessia Prioletta: سلسلة نقوش ذمار. 2، نقش يذكر قبيلة رصابة وقريس في عهد الملك عمدان بين يهقبض
-            </div>
-            <span class="pub-meta">Semitica et Classica, Volume 15, 2022, pp. 221-228, doi: 10.1484/j.sec.5.133139</span>
-            <div class="pub-links">
-                <a href="https://shs.hal.science/halshs-03792457v1" target="_blank" rel="noopener"><i class="fas fa-globe"></i> HAL</a>
-                <a href="https://doi.org/10.1484/j.sec.5.133139" target="_blank" rel="noopener"><i class="ai ai-doi"></i> DOI</a>
-            </div>
-        </div>
+                <!-- 2024 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2024</span>
+                        </div>
+                        <h3 class="pub-title">نقوش من مناطق قبيلة مهأنف اليمنية: تحقيق ودراسة</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة كلية الآداب، جامعة ذمار، مجلد 12 عدد 2، 2024، ص 25- 90</p>
+                    </div>
+                    <a href="https://doi.org/10.35696/arts.v12i3.2096" target="_blank" class="btn-pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                </div>
 
-        <!-- 7 -->
-        <div class="pub-item">
-            <span class="pub-index">07</span>
-            <div class="pub-title">
-                <i class="fas fa-caret-left"></i>
-                Prioletta (A.), Robin (Ch. J.), Schiettecatte (J.), Gajda (I.), &amp; Nuʿmān (Kh. H.), السبئيون على الساحل الصومالي « Sabaeans on the Somali coast »
-            </div>
-            <span class="pub-meta">Arabian Archaeology and Epigraphy, 32 (Suppl. 1), 2021, pp. 328–339</span>
-            <div class="pub-links">
-                <a href="https://shs.hal.science/halshs-03483948v1/file/Prioletta%20et%20al%20AAE%20Saba-Somalia_Submitted%20version.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> PDF</a>
-            </div>
-        </div>
+                <!-- 2023 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2023</span>
+                        </div>
+                        <h3 class="pub-title">نقوش جديدة من مصنعة مارية NOUVELLES INSCRIPTIONS DE MASNA'AT MARIYIA</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> Arabie - Arabies: Volume Offert a Christian Julien Robin Par Ses Collegues, Ses Eleves Et Ses Amis 2023, 41 - 57</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/9925982394131424/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
 
-        <!-- 8 -->
-        <div class="pub-item">
-            <span class="pub-index">08</span>
-            <div class="pub-title">
-                <i class="fas fa-caret-left"></i>
-                وثائق مدوّنة بخط المسند عن قبيلة شِبَام بَكِيل وقبيلة ميْتم دراسة لغوِّية تاريخية
-            </div>
-            <span class="pub-meta">مجلة كلية الآداب جامعة ذمار، ع 17، 2020، ص 363 - 423</span>
-            <div class="pub-links">
-                <a href="https://doi.org/10.35696/.v1i17.685" target="_blank" rel="noopener"><i class="ai ai-doi"></i> DOI</a>
-                <a href="https://web.facebook.com/groups/arabia.books/posts/3854206341309090/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
-            </div>
-        </div>
+                <!-- 2022 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2022</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: Alessia Prioletta</span>
+                        </div>
+                        <h3 class="pub-title">سلسلة نقوش ذمار. 2، نقش يذكر قبيلة رصابة وقريس في عهد الملك عمدان بين يهقبض</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> Semitica et Classica, Volume 15, 2022, pp. 221-228, doi: 10.1484/j.sec.5.133139</p>
+                    </div>
+                    <a href="https://shs.hal.science/halshs-03792457v1" target="_blank" class="btn-pub-link"><i class="fas fa-globe"></i> HAL</a>
+                </div>
 
-        <!-- 9 -->
-        <div class="pub-item">
-            <span class="pub-index">09</span>
-            <div class="pub-title">
-                <i class="fas fa-caret-left"></i>
-                تقنية تصريف المياه في السدود اليمنية القديمة سد أضرعة جبارة نموذجا
-            </div>
-            <span class="pub-meta">مجلة آداب الحديدة العدد6 يوليو - سبتمبر 2020، ص 1- 29</span>
-            <div class="pub-links">
-                <a href="https://www.facebook.com/groups/arabia.books/posts/3846198298776561/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
-            </div>
-        </div>
+                <!-- 2021 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2021</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: Prioletta (A.), Robin (Ch. J.), Schiettecatte (J.), Gajda (I.)</span>
+                        </div>
+                        <h3 class="pub-title">السبئيون على الساحل الصومالي « Sabaeans on the Somali coast »</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> Arabian Archaeology and Epigraphy, 32 (Suppl. 1), 2021, pp. 328–339</p>
+                    </div>
+                    <a href="https://shs.hal.science/halshs-03483948v1/file/Prioletta%20et%20al%20AAE%20Saba-Somalia_Submitted%20version.pdf" target="_blank" class="btn-pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                </div>
 
-        <!-- 10 -->
-        <div class="pub-item">
-            <span class="pub-index">10</span>
-            <div class="pub-title">
-                <i class="fas fa-caret-left"></i>
-                مكتشفات أثرية جديدة في اليمن باستعمال التقنيات الحديثة
-            </div>
-            <span class="pub-meta">مجلة الآداب للدراسات الإنسانية والاجتماعية، العدد 13، 2019.</span>
-            <div class="pub-links">
-                <a href="https://doi.org/10.35696/.v1i13.628" target="_blank" rel="noopener"><i class="ai ai-doi"></i> DOI</a>
-                <a href="https://web.facebook.com/groups/arabia.books/posts/3107462072650191/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
-            </div>
-        </div>
+                <!-- 2021 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2021</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: Robin, Christian Julien, Alessia Prioletta, Jérémie Schiettecatte</span>
+                        </div>
+                        <h3 class="pub-title">السبئيون في القرن الأفريقي (شمال الصومال) حوالي القرنين الثامن والسابع قبل الميلاد</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> Comptes rendus des séances de l’Académie des Inscriptions et Belles-Lettres (CRAI), no. 1 (janvier–mars): 9–49.</p>
+                    </div>
+                    <a href="https://shs.hal.science/halshs-04135613/document" target="_blank" class="btn-pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                </div>
 
-        <!-- 11 -->
-        <div class="pub-item">
-            <span class="pub-index">11</span>
-            <div class="pub-title">
-                <i class="fas fa-caret-left"></i>
-                نقوش جديدة من ذمار
-            </div>
-            <span class="pub-meta">مجلة ريدان، ع 8، 2013، ص 291 - 311</span>
-            <div class="pub-links">
-                <a href="https://www.thamaruniv-erp.org/Staff_Backend/uploads/Noman%20Khaldon%20%D8%AE%D9%84%D8%AF%D9%88%D9%86%20%D9%86%D8%B9%D9%85%D8%A7%D9%86%202013%20%D9%86%D9%82%D9%88%D8%B4%20%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9%20%D9%85%D9%86%20%D8%B0%D9%85%D8%A7%D8%B1.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> PDF</a>
-            </div>
-        </div>
+                <!-- 2020 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2020</span>
+                        </div>
+                        <h3 class="pub-title">وثائق مدوّنة بخط المسند عن قبيلة شِبَام بَكِيل وقبيلة ميْتم دراسة لغوِّية تاريخية</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة كلية الآداب جامعة ذمار، ع 17، 2020، ص 363 - 423</p>
+                    </div>
+                    <a href="https://doi.org/10.35696/.v1i17.685" target="_blank" class="btn-pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                </div>
 
-        <!-- 12 -->
-        <div class="pub-item">
-            <span class="pub-index">12</span>
-            <div class="pub-title">
-                <i class="fas fa-caret-left"></i>
-                دراسة للنقوش العربية الجنوبية من منطقة ذمار (اليمن) A Study of south Arabian Inscriptions from the region of Dhamar (Yemen)
-            </div>
-            <span class="pub-meta">PhD, Pisa University Press, 2012</span>
-            <div class="pub-links">
-                <a href="https://www.academia.edu/100978495" target="_blank" rel="noopener"><i class="fab fa-academia"></i> Academia</a>
-            </div>
-        </div>
+                <!-- 2020 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2020</span>
+                        </div>
+                        <h3 class="pub-title">تقنية تصريف المياه في السدود اليمنية القديمة سد أضرعة جبارة نموذجا</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة آداب الحديدة العدد6 يوليو - سبتمبر 2020، ص 1- 29</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/3846198298776561/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
 
-        <!-- 13 -->
-        <div class="pub-item">
-            <span class="pub-index">13</span>
-            <div class="pub-title">
-                <i class="fas fa-caret-left"></i>
-                ذمار القرن موقع مدينة ذمار القديمة
-            </div>
-            <span class="pub-meta">صنعاء الحضارة والتاريخ، المجلد الأول، جامعة صنعاء، صنعاء، 2005، ص 119-147</span>
-            <div class="pub-links">
-                <a href="https://web.facebook.com/groups/arabia.books/posts/609586795771077/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
-            </div>
-        </div>
+                <!-- 2019 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2019</span>
+                        </div>
+                        <h3 class="pub-title">مكتشفات أثرية جديدة في اليمن باستعمال التقنيات الحديثة</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الآداب للدراسات الإنسانية والاجتماعية، العدد 13، 2019.</p>
+                    </div>
+                    <a href="https://doi.org/10.35696/.v1i13.628" target="_blank" class="btn-pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                </div>
 
-        <!-- 14 -->
-        <div class="pub-item">
-            <span class="pub-index">14</span>
-            <div class="pub-title">
-                <i class="fas fa-caret-left"></i>
-                الأوضاع السياسية والاجتماعية في عهد شمر يهرعش
-            </div>
-            <span class="pub-meta">وزارة الثقافة والسياحة، صنعاء 2004</span>
-            <div class="pub-links">
-                <a href="https://www.facebook.com/groups/arabia.books/posts/584142274982196/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
-            </div>
-        </div>
-    </div>
+                <!-- 2013 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2013</span>
+                        </div>
+                        <h3 class="pub-title">نقوش جديدة من ذمار</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة ريدان، ع 8، 2013، ص 291 - 311</p>
+                    </div>
+                    <a href="https://www.thamaruniv-erp.org/Staff_Backend/uploads/Noman%20Khaldon%20%D8%AE%D9%84%D8%AF%D9%88%D9%86%20%D9%86%D8%B9%D9%85%D8%A7%D9%86%202013%20%D9%86%D9%82%D9%88%D8%B4%20%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9%20%D9%85%D9%86%20%D8%B0%D9%85%D8%A7%D8%B1.pdf" target="_blank" class="btn-pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                </div>
 
-    <!-- ========== الفوتر ========== -->
-    <footer class="footer">
-        <div class="sponsor">
-            <i class="fas fa-crown"></i>
-            الصفحة برعاية وتصميم الدكتور صلاح الحسيني
-            <i class="fas fa-crown"></i>
-            <span style="display:inline-block; margin-right:10px; font-weight:300;">2026</span>
-        </div>
+                <!-- 2012 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2012</span>
+                        </div>
+                        <h3 class="pub-title">دراسة للنقوش العربية الجنوبية من منطقة ذمار (اليمن) A Study of south Arabian Inscriptions from the region of Dhamar (Yemen)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> PhD, Pisa University Press, 2012</p>
+                    </div>
+                    <a href="https://www.academia.edu/100978495" target="_blank" class="btn-pub-link"><i class="fab fa-academia"></i> Academia</a>
+                </div>
 
-        <div class="social-group">
-            <a href="https://www.facebook.com/groups/arabia.books" target="_blank" rel="noopener">
-                <i class="fab fa-facebook-f"></i> تابعونا على الفيسبوك
-            </a>
-            <div class="group-desc">
-                <i class="fas fa-users"></i> مجموعة كتب تاريخ وآثار الجزيرة العربية على الفيسبوك
-                <br />
-                <i class="fas fa-book"></i> مكتبة رقمية متخصصة في تاريخ وآثار وتراث شبه الجزيرة العربية واليمن القديم
-                <br />
-                <i class="fas fa-graduation-cap"></i> أعمال أكاديمية وبحثية ما بين رسائل جامعية وأبحاث محكمة في كبرى المجلات العلمية
+                <!-- 2005 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2005</span>
+                        </div>
+                        <h3 class="pub-title">ذمار القرن موقع مدينة ذمار القديمة</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> صنعاء الحضارة والتاريخ، المجلد الأول، جامعة صنعاء، صنعاء، 2005، ص 119-147</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/609586795771077/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2004 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2004</span>
+                        </div>
+                        <h3 class="pub-title">الأوضاع السياسية والاجتماعية في عهد شمر يهرعش</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> وزارة الثقافة والسياحة، صنعاء 2004</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/584142274982196/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
             </div>
-        </div>
+        </section>
 
-        <div class="copyright">
-            <i class="fas fa-feather-alt"></i>
-            جميع الحقوق محفوظة ©
-            <i class="fas fa-heart" style="color:#a67b5b;"></i>
-            2026
+        <!-- ===== محاضرات يوتيوب (تم حذفها لعدم وجود محتوى مرئي) ===== -->
+        <!-- تم حذف تبويب الفيديوهات لعدم وجود محتوى مرئي كما في الصفحات السابقة -->
+
+    </main>
+
+    <!-- ===== التذييل ===== -->
+    <footer>
+        <div class="footer-container">
+            <p class="footer-sponsor">الصفحة برعاية وتصميم الدكتور صلاح الحسيني 2026 ©</p>
+
+            <div class="footer-group-box">
+                <h4>تابعونا على الفيسبوك</h4>
+                <p>في مجموعة: <strong>كتب تاريخ وآثار الجزيرة العربية</strong></p>
+                <a href="https://www.facebook.com/groups/arabia.books" target="_blank" class="btn-facebook">
+                    <i class="fab fa-facebook"></i> الانضمام للمجموعة
+                </a>
+            </div>
+
+            <p class="footer-desc">
+                مكتبة رقمية متخصصة في تاريخ وآثار وتراث شبه الجزيرة العربية واليمن القديم.
+                تضم أعمالاً أكاديمية وبحثية ما بين رسائل جامعية وأبحاث محكمة في كبرى المجلات العلمية.
+            </p>
         </div>
     </footer>
-
-</div>
-<!-- نهاية الحاوية -->
 
 </body>
 </html>
