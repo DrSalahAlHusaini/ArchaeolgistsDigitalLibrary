@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مؤلفات الأستاذ مطهر الإرياني</title>
+    <!-- خطوط عربية أنيقة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+        /* ===== المتغيرات ===== */
+        :root {
+            --primary-color: #4a2c1a;
+            --secondary-color: #6b3f28;
+            --accent-color: #c9a87c;
+            --accent-hover: #b0885a;
+            --bg-light: #fdfbf7;
+            --text-dark: #1f2421;
+            --text-muted: #6c757d;
+            --card-bg: #ffffff;
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+            --shadow-hover: 0 8px 28px rgba(0, 0, 0, 0.10);
+            --radius: 10px;
+        }
+
+        /* ===== إعادة ضبط ===== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        h1,
+        h2,
+        h3,
+        .profile-title {
+            font-family: 'Amiri', serif;
+        }
+
+        /* ===== الهيدر ===== */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0.05;
+            background-image: url('https://www.transparenttextures.com/patterns/sandpaper.png');
+            pointer-events: none;
+        }
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-badge {
+            background-color: rgba(255, 255, 255, 0.10);
+            display: inline-block;
+            padding: 5px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            letter-spacing: 0.3px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 25px;
+            font-weight: 300;
+            opacity: 0.92;
+        }
+
+        .profile-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-profile {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid var(--accent-color);
+            padding: 8px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        .btn-profile:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* ===== المحتوى الرئيسي ===== */
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2.1rem;
+            color: var(--primary-color);
+            margin-bottom: 35px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* ===== بطاقات المؤلفات ===== */
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 60px;
+        }
+
+        .pub-card {
+            background: var(--card-bg);
+            border-right: 5px solid var(--accent-color);
+            border-radius: 4px;
+            padding: 22px 25px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .pub-card:hover {
+            transform: scale(1.005);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .pub-info {
+            flex: 1;
+        }
+
+        .pub-meta {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .pub-year {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 2px 14px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .pub-author {
+            color: var(--secondary-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            background-color: #f1ece7;
+            padding: 2px 12px;
+            border-radius: 4px;
+        }
+
+        .pub-title {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .pub-journal {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-pub-link {
+            background-color: #1877f2;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+            align-self: center;
+            flex-shrink: 0;
+        }
+        .btn-pub-link:hover {
+            background-color: #145dbf;
+        }
+
+        /* ===== شبكة الفيديو مع الصور المصغرة ===== */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
+            margin-bottom: 60px;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border-top: 3px solid var(--secondary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .video-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* حاوية الصورة المصغرة */
+        .video-thumbnail-wrapper {
+            position: relative;
+            background: #0b0b0b;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-thumbnail-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .video-card:hover .video-thumbnail-wrapper img {
+            transform: scale(1.03);
+        }
+
+        /* تراكب أيقونة التشغيل */
+        .play-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.20);
+            transition: background 0.3s ease;
+            pointer-events: none;
+        }
+        .video-thumbnail-wrapper:hover .play-overlay {
+            background: rgba(0, 0, 0, 0.35);
+        }
+        .play-overlay i {
+            font-size: 4.2rem;
+            color: rgba(255, 255, 255, 0.85);
+            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+            transition: transform 0.25s ease, color 0.25s ease;
+            pointer-events: none;
+        }
+        .video-thumbnail-wrapper:hover .play-overlay i {
+            transform: scale(1.10);
+            color: #fff;
+        }
+
+        /* الرابط الذي يغطي الصورة بالكامل (لجعلها قابلة للنقر) */
+        .video-thumbnail-link {
+            display: block;
+            position: relative;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            text-decoration: none;
+        }
+        .video-thumbnail-link img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .video-card:hover .video-thumbnail-link img {
+            transform: scale(1.03);
+        }
+
+        /* جسم البطاقة (العنوان) */
+        .video-body {
+            padding: 18px 20px 12px 20px;
+            flex: 1;
+        }
+        .video-body h3 {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-weight: 700;
+        }
+
+        /* زر المشاهدة */
+        .btn-video {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #ff0000;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 16px;
+            margin: 4px 16px 18px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease, transform 0.15s ease;
+            border: none;
+        }
+        .btn-video:hover {
+            background-color: #cc0000;
+            transform: scale(1.01);
+        }
+        .btn-video i {
+            font-size: 1.1rem;
+        }
+
+        /* ===== التذييل ===== */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 4px solid var(--accent-color);
+        }
+        .footer-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .footer-sponsor {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .footer-group-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .footer-group-box h4 {
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .btn-facebook {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #1877f2;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 28px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn-facebook:hover {
+            background-color: #145dbf;
+        }
+        .footer-desc {
+            font-size: 0.9rem;
+            color: #b3c5d7;
+            max-width: 700px;
+            margin: 15px auto 0;
+            line-height: 1.7;
+        }
+
+        /* ===== استجابة ===== */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1.05rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .pub-card {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 18px;
+            }
+            .btn-pub-link {
+                text-align: center;
+                justify-content: center;
+                align-self: stretch;
+            }
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+            .play-overlay i {
+                font-size: 3.2rem;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== الهيدر ===== -->
+    <header>
+        <div class="header-container">
+            <span class="profile-badge">المؤلفات الأكاديمية الكاملة</span>
+            <h1>الأستاذ مطهر بن علي الإرياني</h1>
+            <p class="subtitle">مؤرخ، شاعر، وباحث في آثار اليمن القديم – رحمه الله (1933-2016)</p>
+
+            <div class="profile-links">
+                <a href="https://ar.wikipedia.org/wiki/%D9%85%D8%B7%D9%87%D8%B1_%D8%B9%D9%84%D9%8A_%D8%A7%D9%84%D8%A5%D8%B1%D9%8A%D8%A7%D9%86%D9%8A" target="_blank" class="btn-profile">
+                    <i class="fab fa-wikipedia-w"></i> ويكيبيديا
+                </a>
+             </div>
+        </div>
+    </header>
+
+    <!-- ===== المحتوى الرئيسي ===== -->
+    <main>
+
+        <!-- ===== قائمة المؤلفات ===== -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-book-open"></i> قائمة المؤلفات والأبحاث العلمية</h2>
+
+            <div class="publications-list">
+
+                <!-- 2023 (بعد الوفاة) -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2023</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: Werner Daum، يوسف بن محمد عبد الله</span>
+                        </div>
+                        <h3 class="pub-title">ترنيمة مقفاة من اليمن من القرن الثالث الميلادي: أصول الشعر والأدب العربي؟ (A Third Century AD Rhymed Hymn from Yemen: The Origins of Arabic Poetry and Literature?)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> Arabian Archaeology and Epigraphy 34, no. 1 (November): 140–157. Wiley</p>
+                    </div>
+                    <a href="https://web.facebook.com/groups/arabia.books/posts/28153356614300724/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2012 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2012</span>
+                        </div>
+                        <h3 class="pub-title">لماذا سمي المندب مندباً</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الإكليل العدد 40 يناير- يونيو 2012، ص 20-39</p>
+                    </div>
+                    <a href="http://www.mediafire.com/download/d5i9bc8d1eu3s3g" target="_blank" class="btn-pub-link"><i class="fas fa-file-pdf"></i> تحميل العدد</a>
+                </div>
+
+                <!-- 2008 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2008</span>
+                        </div>
+                        <h3 class="pub-title">نار ضروان في نقش مسندي وفي كتب التراث</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الإكليل - العددان 31- 32، يناير - يونيو2008، ص 37-54</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/833424556720632/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2006 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2006</span>
+                        </div>
+                        <h3 class="pub-title">علم التاريخ عند العرب أصل الكلمة وتطورها</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> حوليات يمنية، ع3، 2006 ص 127- 131</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/8301686409894372/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2005 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2005</span>
+                        </div>
+                        <h3 class="pub-title">أنشودة من محرم بلقيس</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الثوابت، عدد 41، يوليو - سبتمبر، 2005م، صنعاء، ص. 64-106.</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/474511922611899/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 2004 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">2004</span>
+                        </div>
+                        <h3 class="pub-title">حولية أبرهة وإصلاح سد مارب محتوى نقش أبرهة في مارب CIH 541/ GL618</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة المسند، حولية تعنى بشئون الآثار والتاريخ والتراث، عدد 2- صنعاء 2004، ص 18- 19.</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/474512749278483/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+                <!-- 1999 (مشترك) -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1999</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: حسين بن عبد الله العمري، يوسف محمد عبد الله</span>
+                        </div>
+                        <h3 class="pub-title">شمس العلوم ودواء كلام العرب من الكلوم (تحقيق)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> دار الفكر المعاصر (بيروت - لبنان)، دار الفكر (دمشق - سورية) الطبعة: الأولى، 1420 هـ - 1999 م</p>
+                    </div>
+                    <a href="http://www.archive.org/details/shamsal3oloum" target="_blank" class="btn-pub-link"><i class="fas fa-archive"></i> أرشيف</a>
+                </div>
+
+                <!-- 1996 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1996</span>
+                        </div>
+                        <h3 class="pub-title">المعجم اليمني (أ) في اللغة والتراث حول مفردات خاصة من اللهجات اليمنية</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> دار الفكر -دمشق، الطبعة الأولى، 1996</p>
+                    </div>
+                    <a href="http://www.mediafire.com/?3g053h8y1dp8ap8" target="_blank" class="btn-pub-link"><i class="fas fa-file-pdf"></i> تحميل</a>
+                </div>
+
+                <!-- 1995 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1995</span>
+                        </div>
+                        <h3 class="pub-title">غمْدان أوّل ناطحَة سَحاب في العَالم</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة التراث العربي-مجلة فصلية تصدر عن اتحاد الكتاب العرب-دمشق العدد 58 - السنة 15 - كانون الثاني "يناير" 1995 - شعبان 1415</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/474510889278669/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 1992 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1992</span>
+                        </div>
+                        <h3 class="pub-title">نقشان من الأقمر</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> دراسات يمنية، ع47، مركز الدراسات والبحوث اليمني 1992، ص 52- 71</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/8100710906658591/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 1991 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1991</span>
+                        </div>
+                        <h3 class="pub-title">فوق الجبل (ديوان شعر)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> ط2، 1991</p>
+                    </div>
+                    <a href="https://ia601508.us.archive.org/24/items/foqalgbl/foqalgbl.pdf" target="_blank" class="btn-pub-link"><i class="fas fa-file-pdf"></i> تحميل</a>
+                </div>
+
+                <!-- 1990 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1990</span>
+                        </div>
+                        <h3 class="pub-title">في تاريخ اليمن نقوش مسندية وتعليقات (الطبعة الثانية)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مركز الدراسات والبحوث اليمني- صنعاء. 1990</p>
+                    </div>
+                    <a href="http://www.mediafire.com/download/os295c0jbr80eie/" target="_blank" class="btn-pub-link"><i class="fas fa-file-pdf"></i> تحميل</a>
+                </div>
+
+                <!-- 1990 (مشترك) -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1990</span>
+                            <span class="pub-author"><i class="fas fa-users"></i> بالاشتراك مع: حسين العمري، يوسف محمد عبد الله</span>
+                        </div>
+                        <h3 class="pub-title">في صفة بلاد اليمن عبر العصور من القرن السابع قبل الميلاد إلى نهاية القرن التاسع عشر الميلادي</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> دار الفكر المعاصر- بيروت. 1990</p>
+                    </div>
+                    <a href="http://archive.org/details/AlamriEtal1990" target="_blank" class="btn-pub-link"><i class="fas fa-archive"></i> أرشيف</a>
+                </div>
+
+                <!-- 1989 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1989</span>
+                        </div>
+                        <h3 class="pub-title">نقش جبل أم ليلى (Ir76)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الإكليل- السنة السابعة - العدد 4 (=ع19)، شتاء 1989م، ص 18-30</p>
+                    </div>
+                    <a href="http://www.mediafire.com/download/a1fst0jc45f6ivo" target="_blank" class="btn-pub-link"><i class="fas fa-file-pdf"></i> تحميل العدد</a>
+                </div>
+
+                <!-- 1988 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1988</span>
+                        </div>
+                        <h3 class="pub-title">نقش جديد من مارب (Ir70)</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الإكليل، السنة السادسة - العددان الثالث، والرابع 1988، ص 261-285</p>
+                    </div>
+                    <a href="http://www.mediafire.com/download/mt97zc8ikqwcej3" target="_blank" class="btn-pub-link"><i class="fas fa-file-pdf"></i> تحميل العدد</a>
+                </div>
+
+                <!-- 1988 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1988</span>
+                        </div>
+                        <h3 class="pub-title">نقوش منطقة "يلا" نظرة اولية</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> في: المجموعة الأثارية المعمارية السبئية وادي يلا (تحرير اليساندرو دي ميغريه): إسيمو، روما 1988. ص 41-75</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/671912832871806/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 1988 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1988</span>
+                        </div>
+                        <h3 class="pub-title">نقش من ناعط إرياني 71 - E 71</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> دراسات يمنية، العدد33، مركز الدراسات والبحوث اليمني، صنعاء، ص 21 – 46</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/495420640521027/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 1985 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1985</span>
+                        </div>
+                        <h3 class="pub-title">نظرات حول كتاب المعجم السبئي</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الإكليل- السنة الثالثة - العدد 1 - خريف 1985، ص 7-18</p>
+                    </div>
+                    <a href="http://www.mediafire.com/download/gdegl5g4t3k1orx" target="_blank" class="btn-pub-link"><i class="fas fa-file-pdf"></i> تحميل العدد</a>
+                </div>
+
+                <!-- 1984 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1984</span>
+                        </div>
+                        <h3 class="pub-title">نقش بيت ضبعان شرح وتعليقات</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة دراسات يمنية عدد (18)، 1984، ص 25 - 55</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/8347133662016313/" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 1983 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1983</span>
+                        </div>
+                        <h3 class="pub-title">ذمار علي وابنه ثأران يعودان إلى صنعاء</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الإكليل -السنة 2- العددان 2-3، 1983، ص248-273</p>
+                    </div>
+                    <a href="https://www.mediafire.com/file/668bb32dl24xov6" target="_blank" class="btn-pub-link"><i class="fas fa-file-pdf"></i> تحميل</a>
+                </div>
+
+                <!-- 1983 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1983</span>
+                        </div>
+                        <h3 class="pub-title">اعادة للنظر في: نقش عجل بن هفعم في قرية الفاو</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> دراسات يمنية، العدد 13، مركز الدراسات والبحوث اليمني، صنعاء، 1983، ص 189-204</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/arabia.books/posts/609580425771714" target="_blank" class="btn-pub-link"><i class="fab fa-facebook"></i> عرض المنشور</a>
+                </div>
+
+                <!-- 1982 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1982</span>
+                        </div>
+                        <h3 class="pub-title">مقاطعة جازان في نقوش المسند</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الإكليل - السنة الثانية- العدد 1، صيف 1982، ص 7- 43</p>
+                    </div>
+                    <a href="http://www.mediafire.com/download/ezp316p1zu5ppc6" target="_blank" class="btn-pub-link"><i class="fas fa-file-pdf"></i> تحميل العدد</a>
+                </div>
+
+                <!-- 1980 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1980</span>
+                        </div>
+                        <h3 class="pub-title">نماذج من المفردات اليمنية الخاصة</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الإكليل- السنة الأولى- العدد 2، خريف 1980، ص 135-144</p>
+                    </div>
+                    <a href="http://www.mediafire.com/download/cjo4aee0td6ndf4" target="_blank" class="btn-pub-link"><i class="fas fa-file-pdf"></i> تحميل العدد</a>
+                </div>
+
+                <!-- 1980 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1980</span>
+                        </div>
+                        <h3 class="pub-title">حول الكلمات اليمنية الخاصة</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> مجلة الإكليل - السنة الأولى - العدد 1، (يناير 1980، ص57 – 65</p>
+                    </div>
+                    <a href="http://www.mediafire.com/download/30wrr94cna8cayr" target="_blank" class="btn-pub-link"><i class="fas fa-file-pdf"></i> تحميل العدد</a>
+                </div>
+
+                <!-- 1973 -->
+                <div class="pub-card">
+                    <div class="pub-info">
+                        <div class="pub-meta">
+                            <span class="pub-year">1973</span>
+                        </div>
+                        <h3 class="pub-title">في تاريخ اليمن. شرح وتعليق على نقوش لم تنشر 34 نقشًا من مجموعة القاضي علي عبدالله الكهالي</h3>
+                        <p class="pub-journal"><i class="fas fa-bookmark"></i> صنعاء، مركز الدراسات اليمنية 1973</p>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1z-SzBXNrqzlXPN7oczKaM0w57zhO28rq/view?usp=drivesdk" target="_blank" class="btn-pub-link"><i class="fab fa-google-drive"></i> تحميل</a>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- ===== محاضرات يوتيوب مع صور مصغرة ===== -->
+        <section>
+            <h2 class="section-title"><i class="fab fa-youtube"></i> محاضرات ولقاءات مرئية على يوتيوب</h2>
+
+            <div class="video-grid">
+
+                <!-- 1 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=2D404lR6iuo" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/2D404lR6iuo/hqdefault.jpg" alt="فيلم وثائقي حارس الهوية مطهر الإرياني" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>فيلم وثائقي | حارس الهوية.. مطهر الإرياني</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=2D404lR6iuo" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 2 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=Qh_LOOH4zYg" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/Qh_LOOH4zYg/hqdefault.jpg" alt="رحلة فنان الحلقة 17 مطهر الإرياني شاعر التغريبة والريف" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>رحلة فنان | الحلقة 17 | مطهر الإرياني – شاعر التغريبة والريف</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=Qh_LOOH4zYg" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 3 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=x1SN_hCvj-U" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/x1SN_hCvj-U/hqdefault.jpg" alt="مطهر الإرياني حارس الهوية وبوصلة المجد اليمني فرسان المسند" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>مطهر الإرياني حارس الهوية وبوصلة المجد اليمني | فرسان المسند</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=x1SN_hCvj-U" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+                <!-- 4 -->
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=FqYkl5FpF0o" target="_blank" class="video-thumbnail-link">
+                        <img src="https://img.youtube.com/vi/FqYkl5FpF0o/hqdefault.jpg" alt="مطهر الارياني شاعر البن والحب" loading="lazy" />
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </a>
+                    <div class="video-body">
+                        <h3>مطهر الارياني .. شاعر البن والحب</h3>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=FqYkl5FpF0o" target="_blank" class="btn-video"><i class="fab fa-youtube"></i> مشاهدة الفيديو</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== التذييل ===== -->
+    <footer>
+        <div class="footer-container">
+            <p class="footer-sponsor">الصفحة برعاية وتصميم الدكتور صلاح الحسيني 2026 ©</p>
+
+            <div class="footer-group-box">
+                <h4>تابعونا على الفيسبوك</h4>
+                <p>في مجموعة: <strong>كتب تاريخ وآثار الجزيرة العربية</strong></p>
+                <a href="https://www.facebook.com/groups/arabia.books" target="_blank" class="btn-facebook">
+                    <i class="fab fa-facebook"></i> الانضمام للمجموعة
+                </a>
+            </div>
+
+            <p class="footer-desc">
+                مكتبة رقمية متخصصة في تاريخ وآثار وتراث شبه الجزيرة العربية واليمن القديم.
+                تضم أعمالاً أكاديمية وبحثية ما بين رسائل جامعية وأبحاث محكمة في كبرى المجلات العلمية.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
